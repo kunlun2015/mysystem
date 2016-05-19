@@ -1244,6 +1244,7 @@
     <script src="<?php echo C('STATIC_URL');?>assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
     <script src="<?php echo C('STATIC_URL');?>assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
     <script src="<?php echo C('STATIC_URL');?>assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="<?php echo C('STATIC_URL');?>assets/global/plugins/bootbox/bootbox.min.js" type="text/javascript"></script>
     <!-- END PAGE LEVEL PLUGINS -->        
     <!-- BEGIN THEME GLOBAL SCRIPTS -->
     <script src="<?php echo C('STATIC_URL');?>assets/global/scripts/app.min.js" type="text/javascript"></script>

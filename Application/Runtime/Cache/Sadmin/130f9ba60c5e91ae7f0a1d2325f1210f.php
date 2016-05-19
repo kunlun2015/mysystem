@@ -643,79 +643,25 @@
                             <tr>
                                 <th>
                                     <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" /> </th>
-                                <th> Username </th>
-                                <th> Email </th>
-                                <th> Points </th>
-                                <th> Joined </th>
-                                <th> Status </th>
+                                <th>用户名</th>
+                                <th>真实姓名</th>
+                                <th>邮箱</th>
+                                <th>状态</th>
+                                <th>操作</th>
                             </tr>
                         </thead>
-                        <tbody>                            
-                            <tr class="odd gradeX">
-                                <td>
-                                    <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                <td> userwow </td>
-                                <td>
-                                    <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                </td>
-                                <td> 20 </td>
-                                <td class="center"> 9.12.2012 </td>
+                        <tbody> 
+                            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?><tr class="odd gradeX">
+                                <td><input type="checkbox" class="checkboxes" value="1" /></td>
+                                <td><?php echo ($data["name"]); ?></td>
+                                <td><?php echo ($data["realname"]); ?></td>
+                                <td><?php echo ($data["email"]); ?></td>
+                                <td class="center"><?php echo ($data["status"]); ?></td>
                                 <td>
                                     <span class="label label-sm label-default"> Blocked </span>
                                 </td>
-                            </tr>                            
-                            <tr class="odd gradeX">
-                                <td>
-                                    <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                <td> wap </td>
-                                <td>
-                                    <a href="mailto:userwow@gmail.com"> test@gmail.com </a>
-                                </td>
-                                <td> 20 </td>
-                                <td class="center"> 12.12.2012 </td>
-                                <td>
-                                    <span class="label label-sm label-success"> Approved </span>
-                                </td>
-                            </tr>
-                            <tr class="odd gradeX">
-                                <td>
-                                    <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                <td> test </td>
-                                <td>
-                                    <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                </td>
-                                <td> 20 </td>
-                                <td class="center"> 19.12.2010 </td>
-                                <td>
-                                    <span class="label label-sm label-success"> Approved </span>
-                                </td>
-                            </tr>
-                            <tr class="odd gradeX">
-                                <td>
-                                    <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                <td> toop </td>
-                                <td>
-                                    <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                </td>
-                                <td> 20 </td>
-                                <td class="center"> 17.12.2010 </td>
-                                <td>
-                                    <span class="label label-sm label-success"> Approved </span>
-                                </td>
-                            </tr>
-                            <tr class="odd gradeX">
-                                <td>
-                                    <input type="checkbox" class="checkboxes" value="1" /> </td>
-                                <td> weep </td>
-                                <td>
-                                    <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                                </td>
-                                <td> 20 </td>
-                                <td class="center"> 15.11.2011 </td>
-                                <td>
-                                    <span class="label label-sm label-success"> Approved </span>
-                                </td>
-                            </tr>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>                            
+                            
                         </tbody>
                     </table>
                 </div>

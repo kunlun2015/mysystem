@@ -1,0 +1,74 @@
+[ 2016-05-19T13:49:42+08:00 ] ::1 /personal/mysystem/Sadmin/Login/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004556s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.1030s ]
+SQL: SELECT `id`,`name`,`password`,`encrypt` FROM `kl_sys_admin` WHERE ( name='kunlun' ) LIMIT 1   [ RunTime:0.0258s ]
+
+[ 2016-05-19T13:53:21+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003089s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `kl_sys_admin` WHERE `name` = 'kunlun' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2016-05-19T13:55:35+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006578s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `kl_sys_admin` WHERE `name` = 'kunlun' LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Array to string conversion E:\document\localsite\php\personal\mysystem\Application\Sadmin\Controller\UserController.class.php 第 31 行.
+
+[ 2016-05-19T13:55:57+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001574s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `kl_sys_admin` WHERE `name` = 'kunlun' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2016-05-19T14:00:33+08:00 ] ::1 /personal/mysystem/Sadmin/Login/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004560s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0133s ]
+SQL: SELECT `id`,`name`,`password`,`encrypt` FROM `kl_sys_admin` WHERE ( name='kunlun' ) LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2016-05-19T14:24:45+08:00 ] ::1 /personal/mysystem/Sadmin/Login/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004643s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`name`,`password`,`encrypt` FROM `kl_sys_admin` WHERE ( name='kunlun' ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2016-05-19T14:27:09+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002355s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `kl_sys_admin` WHERE `name` = 'amos' LIMIT 1   [ RunTime:0.0006s ]
+SQL: INSERT INTO `kl_sys_admin` (`name`,`realname`,`email`,`encrypt`,`password`) VALUES ('amos','孙振环','szhcool1129@sina.com','WAhqDIpC','3718d995fbae5690068eafb41099f99c') [ RunTime:0.0008s ]
+
+[ 2016-05-19T14:49:04+08:00 ] ::1 /personal/mysystem/Sadmin/Login/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004123s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005061s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.1155s ]
+SQL: SELECT `id`,`name`,`password`,`encrypt` FROM `kl_sys_admin` WHERE ( name='kunlun' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-05-19T14:49:57+08:00 ] ::1 /personal/mysystem/Sadmin/Login/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004306s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0138s ]
+SQL: SELECT `id`,`name`,`password`,`encrypt` FROM `kl_sys_admin` WHERE ( name='kunlun' ) LIMIT 1   [ RunTime:0.0007s ]
+
