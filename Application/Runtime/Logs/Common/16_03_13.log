@@ -1,0 +1,9 @@
+[ 2016-03-13T10:07:38+08:00 ] ::1 /personal/thinkphp323/favicon.ico
+ERR: 无法加载模块:Favicon
+
+[ 2016-03-13T10:31:07+08:00 ] ::1 /personal/thinkphp323/%7BC('static_url')%7D
+ERR: 无法加载模块:{C('static_url')}
+
+[ 2016-03-13T13:39:02+08:00 ] ::1 /personal/thinkphp323/index.html
+ERR: 无法加载模块:Index
+

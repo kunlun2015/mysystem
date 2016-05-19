@@ -1,0 +1,16 @@
+    <script>
+        $(function(){
+            $('.menu ul li').hover(function(){
+                if($(this).find('dl.sub-menu').length > 0){
+                    $(this).find('dl.sub-menu').slideDown(200);   
+                }
+                return false;
+            },function(){
+                if($(this).find('dl.sub-menu').length > 0){
+                    $(this).find('dl.sub-menu').slideUp(200);   
+                }    
+            })            
+        })
+    </script>
+</body>
+</html>

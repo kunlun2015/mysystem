@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/**
+ * site theme
+ * @authors Kunlun (735767227)
+ * @date    2016-03-13 10:36:50
+ * @copyright Kunlun
+ */
+
+.wrap{width: 1000px;min-height: 500px;margin: auto;border: #ddd 1px solid;}
+.top-bar{width: 100%;height: 30px;line-height: 30px;font-size: 14px;border-bottom: #eee 1px solid;}
+.top-bar-inner{width: 1000px;margin: auto;}
+.add-favorite{float: right;cursor: pointer;}
+.add-favorite:hover{text-decoration: underline;color:#f30}
+
+.header{width: 1000px;height: 150px;margin: auto;}
+.header .logo{width: 400px;height: 100%;float: left;}
+.header .logo img{margin-top: 29px;}
+.header .site-info{width: 600px;height: 100%;float: left;}
+.menu{width: 100%;height: 45px;line-height: 45px;background-color: #09c;}
+.menu ul{width: 1000px;margin: auto;height: 100%;}
+.menu ul li{display: inline-block;float: left;height: 100%;}
+.menu ul li a{display: inline-block;padding: 0 40px;text-decoration: none;font-size: 16px;color: #fff;font-family: \5FAE\8F6F\96C5\9ED1;}
+.menu ul li a:hover{background-color: #06c;}
+.sub-menu{min-width: 150px;background-color: #09c;display: none;margin-top: -3px;position: absolute;}
+.sub-menu dd{height: 45px;}
+.sub-menu dd a{width: 100%;padding-left: 10px !important;padding-right: 10px !important;box-sizing: border-box;}
+
+.slide-pic{height: 300px;}

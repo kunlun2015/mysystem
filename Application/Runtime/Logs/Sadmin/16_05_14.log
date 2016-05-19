@@ -1,0 +1,54 @@
+[ 2016-05-14T13:27:47+08:00 ] ::1 /personal/mysystem/Sadmin/Login/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005736s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0182s ]
+SQL: SELECT `id`,`name`,`password`,`encrypt` FROM `kl_sys_admin` WHERE ( name='kunlu' ) LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2016-05-14T13:27:50+08:00 ] ::1 /personal/mysystem/Sadmin/Login/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003350s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0561s ]
+SQL: SELECT `id`,`name`,`password`,`encrypt` FROM `kl_sys_admin` WHERE ( name='kunlun' ) LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2016-05-14T13:30:32+08:00 ] ::1 /personal/mysystem/Sadmin/Index/page_user_lock_1.html
+ERR: 非法操作:page_user_lock_1
+
+[ 2016-05-14T13:30:39+08:00 ] ::1 /personal/mysystem/Sadmin/Index/page_user_profile_1.html
+ERR: 非法操作:page_user_profile_1
+
+[ 2016-05-14T13:41:31+08:00 ] ::1 /personal/mysystem/Sadmin/Login/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005986s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.8120s ]
+SQL: SELECT `id`,`name`,`password`,`encrypt` FROM `kl_sys_admin` WHERE ( name='kunlun' ) LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2016-05-14T13:57:49+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002283s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0183s ]
+SQL: INSERT INTO `kl_sys_admin` (`name`,`realname`,`email`,`encrypt`,`password`) VALUES ('szhkunlun','孙振环','735767227@qq.com','ArXpkWTV','e9ea4b4ef845eaaf5a77a53bd28b5f16') [ RunTime:0.0546s ]
+
+[ 2016-05-14T13:58:07+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001896s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0763s ]
+SQL: INSERT INTO `kl_sys_admin` (`name`,`realname`,`email`,`encrypt`,`password`) VALUES ('szhkunlun','孙振环','735767227@qq.com','GKtEZczk','9d57f19dc03a57685cdce809319b360b') [ RunTime:0.0007s ]
+
+[ 2016-05-14T13:58:53+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004420s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0365s ]
+SQL: INSERT INTO `kl_sys_admin` (`name`,`realname`,`email`,`encrypt`,`password`) VALUES ('szhkunlun','孙振环','735767227@qq.com','CqwYgNke','84f129511ae031e10c2742b992a92375') [ RunTime:0.0007s ]
+

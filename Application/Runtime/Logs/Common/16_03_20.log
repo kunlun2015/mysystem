@@ -1,0 +1,24 @@
+[ 2016-03-20T09:56:53+08:00 ] ::1 /personal/thinkphp323/favicon.ico
+ERR: 无法加载模块:Favicon
+
+[ 2016-03-20T10:49:52+08:00 ] ::1 /personal/mysystem/static/backed/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js
+ERR: 无法加载模块:Static
+
+[ 2016-03-20T10:49:52+08:00 ] ::1 /personal/mysystem/static/backed/assets/global/plugins/datatables/datatables.min.js
+ERR: 无法加载模块:Static
+
+[ 2016-03-20T10:51:06+08:00 ] ::1 /personal/mysystem/static/backed/assets/global/plugins/datatables/pdfmake.min.js.map
+ERR: 无法加载模块:Static
+
+[ 2016-03-20T10:55:02+08:00 ] ::1 /personal/mysystem/static/backed/assets/global/plugins/datatables/pdfmake.min.js.map
+ERR: 无法加载模块:Static
+
+[ 2016-03-20T11:04:10+08:00 ] ::1 /personal/mysystem/static/backed/assets/global/plugins/datatables/pdfmake.min.js.map
+ERR: 无法加载模块:Static
+
+[ 2016-03-20T11:05:23+08:00 ] ::1 /personal/mysystem/static/backed/assets/global/plugins/datatables/pdfmake.min.js.map
+ERR: 无法加载模块:Static
+
+[ 2016-03-20T11:07:55+08:00 ] ::1 /personal/mysystem/static/backed/assets/global/plugins/datatables/pdfmake.min.js.map
+ERR: 无法加载模块:Static
+

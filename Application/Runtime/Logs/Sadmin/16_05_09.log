@@ -1,0 +1,123 @@
+[ 2016-05-09T12:49:46+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002904s ]
+
+[ 2016-05-09T12:50:17+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002595s ]
+ERR: Think\Controller:isAjax方法不存在！
+
+[ 2016-05-09T12:52:11+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002654s ]
+ERR: Think\Controller:isPost方法不存在！
+
+[ 2016-05-09T12:53:13+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001964s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002056s ]
+
+[ 2016-05-09T12:53:26+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002760s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003201s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003350s ]
+
+[ 2016-05-09T12:56:11+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002778s ]
+
+[ 2016-05-09T12:56:24+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002693s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002068s ]
+
+[ 2016-05-09T12:56:52+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001846s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002467s ]
+
+[ 2016-05-09T13:02:26+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003267s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001542s ]
+
+[ 2016-05-09T13:03:40+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002925s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002476s ]
+
+[ 2016-05-09T13:03:45+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002844s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002007s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002121s ]
+
+[ 2016-05-09T13:06:39+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002452s ]
+
+[ 2016-05-09T13:20:59+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001651s ]
+
+[ 2016-05-09T13:21:46+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002879s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001275s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001359s ]
+
+[ 2016-05-09T13:23:00+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004491s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002849s ]
+
+[ 2016-05-09T13:24:38+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002178s ]
+
+[ 2016-05-09T13:24:49+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002174s ]
+

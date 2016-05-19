@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/**
+ * site common style
+ * @authors Kunlun (735767227)
+ * @date    2016-03-13 10:29:51
+ * @copyright Kunlun
+ */
+html{overflow-y:scroll}
+body,button,input,select,textarea{font:12px/1.5 Arial,\5B8B\4F53,Helvetica}
+body,div,p,span,i,em,ul,li,a,input,select,textarea,button,dl,dd,dt,form,table,thead,tbody,th,tr,td,img{margin: 0;padding: 0;}
+li{list-style:none outside none}
+iframe,img{border:0 none}img{vertical-align:top}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*zoom:1}
+.clear{clear:both;overflow:hidden;font-size:0;height:0;line-height:0}
+a:hover{text-decoration:underline;color:#f30}

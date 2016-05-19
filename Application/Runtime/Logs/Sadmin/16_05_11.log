@@ -1,0 +1,59 @@
+[ 2016-05-11T21:26:52+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+ERR: 无法加载数据库驱动: Think\Db\Driver\
+
+[ 2016-05-11T21:28:18+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+ERR: SQLSTATE[HY000] [1049] Unknown database 'mysystem'
+
+[ 2016-05-11T21:29:01+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+ERR: 无法加载数据库驱动: Think\Db\Driver\Pdo
+
+[ 2016-05-11T21:30:22+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+ERR: 无法加载数据库驱动: Think\Db\Driver\Pdo
+
+[ 2016-05-11T21:30:23+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+ERR: 无法加载数据库驱动: Think\Db\Driver\Pdo
+
+[ 2016-05-11T21:32:43+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+ERR: 无法加载数据库驱动: Think\Db\Driver\Pdo
+
+[ 2016-05-11T21:33:10+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+ERR: 无法加载数据库驱动: Think\Db\Driver\Pdo
+
+[ 2016-05-11T21:34:38+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+ERR: 无法加载数据库驱动: Think\Db\Driver\Pdo
+
+[ 2016-05-11T21:34:38+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+ERR: 无法加载数据库驱动: Think\Db\Driver\Pdo
+
+[ 2016-05-11T21:34:39+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+ERR: 无法加载数据库驱动: Think\Db\Driver\Pdo
+
+[ 2016-05-11T21:34:39+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+ERR: 无法加载数据库驱动: Think\Db\Driver\Pdo
+
+[ 2016-05-11T21:34:39+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+ERR: 无法加载数据库驱动: Think\Db\Driver\Pdo
+
+[ 2016-05-11T21:37:26+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+ERR: 无法加载数据库驱动: Think\Db\Driver\Pdo
+
+[ 2016-05-11T21:48:04+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002963s ]
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0131s ]
+SQL: INSERT INTO `kl_sys_admin` (`email`,`encrypt`,`password`) VALUES ('735767227@qq.com','UTNPwkiq','fa38cbc77828f6aa1afb02ef013b358c') [ RunTime:0.0769s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001723s ]
+
+[ 2016-05-11T21:51:26+08:00 ] ::1 /personal/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002466s ]
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0218s ]
+SQL: INSERT INTO `kl_sys_admin` (`name`,`realname`,`email`,`encrypt`,`password`) VALUES ('kunlun','孙振环','735767227@qq.com','HVyPQXom','87baacf3ec469b0fc0630092f6fcc894') [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001362s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001432s ]
+
