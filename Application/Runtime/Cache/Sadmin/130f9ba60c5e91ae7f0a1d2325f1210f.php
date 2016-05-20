@@ -32,6 +32,7 @@
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/layout.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/custom.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo C('STATIC_URL');?>css/backed-style.css" rel="stylesheet" type="text/css" />
         <!-- END THEME LAYOUT STYLES -->
         <link rel="shortcut icon" href="favicon.ico" />
     </head>
@@ -646,15 +647,16 @@
                                 <?php if($data["status"] == 0): ?><span class="label label-sm label-success">有效</span>
                                     <?php elseif($data["status"] == 1): ?><span class="label label-sm label-danger">已禁用</span><?php endif; ?>
                                 </td>
-                                <td>
-                                    <a href="">编辑</a>
-                                    <a href="">修改密码</a>
-                                    <a href="">删除</a>
+                                <td class="table-options">
+                                    <a class="edit" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">编辑</a>
+                                    <a class="edit-psd" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">修改密码</a>
+                                    <a class="disabled" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">禁用</a>
+                                    <a class="delete" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">删除</a>
                                 </td>
-                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>                            
-                            
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                         </tbody>
                     </table>
+                    <?php echo ($pagination); ?>
                 </div>
             </div>
             <!-- END EXAMPLE TABLE PORTLET-->
@@ -731,12 +733,80 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- END Modals-->
+<!-- BEGIN Modals-->
+<!--编辑用户-->
+ <div class="modal fade" id="modal-edit-user" tabindex="-1"  data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title"><i class="fa fa-user-plus font-green"></i> 编辑用户</h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-danger display-hide">
+                    <button class="close" data-close="alert"></button> You have some form errors. Please check below. 
+                </div>
+                <div class="alert alert-success display-hide">
+                    <button class="close" data-close="alert"></button> Your form validation is successful! 
+                </div>
+                <div class="portlet-body form">
+                    <form class="form-horizontal form-add-user" role="form" novalidate="novalidate">
+                        <div class="form-body">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">用户名</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="username" class="form-control" placeholder="请输入登录用户名" readonly="readonly">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">真实姓名</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="realname" class="form-control" placeholder="请输入登录用户的真实姓名">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">E-mail</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="email" id="email" class="form-control" placeholder="请输入登录用户的E-mail">
+                                </div>
+                            </div>                            
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">备注</label>
+                                <div class="col-md-10">
+                                    <textarea name="remark" id="remark" class="form-control" placeholder="登录用户的备注信息"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn dark btn-outline" data-dismiss="modal">取消</button>
+                <button type="button" class="btn green submit-edit-user">确定</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- END Modals-->
                </div>
             </div>
             <!-- END PAGE CONTENT BODY -->
             <!-- END CONTENT BODY -->
         </div>
         <!-- END CONTENT -->
+        <div class="loading-block">
+            <div class="loading">
+                <div class="loading-inner line-scale">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
         <!-- BEGIN QUICK SIDEBAR -->
         <a href="javascript:;" class="page-quick-sidebar-toggler">
             <i class="icon-login"></i>
@@ -1406,6 +1476,7 @@
     <!-- END THEME LAYOUT SCRIPTS -->
     <script>    
         $(function(){
+            //添加用户
             $('#bt-add-user').click(function(){
                 $('#modal-add-user').modal('show');
                 return false;
@@ -1499,6 +1570,31 @@
                         })
                     return false;
                 }
+            })
+            //编辑用户
+            $('.edit').click(function(){
+                var id = $(this).data('id');
+                $.post('<?php echo U('Sadmin/User/userInfo');?>', {id: id}, function(data){
+                    if(data.status == 'success'){
+                        $('#modal-edit-user').find("input[name='username']").val(data.data.name);
+                        $('#modal-edit-user').find("input[name='realname']").val(data.data.realname);
+                        $('#modal-edit-user').find("input[name='email']").val(data.data.email);
+                        $('#modal-edit-user').find("input[name='remark']").val(data.data.remark);
+                        $('#modal-edit-user').modal('show');                        
+                    }else{
+                        bootbox.dialog({
+                            message: data.msg,
+                            title: "温馨提示：",
+                            buttons:{
+                                success:{
+                                    label: "确定",
+                                    className: "green"
+                                }
+                            }
+                        })
+                    }
+                }, 'json')                
+                return false;
             })            
         })
     </script>    

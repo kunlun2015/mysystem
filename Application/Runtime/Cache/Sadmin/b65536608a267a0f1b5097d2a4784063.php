@@ -32,6 +32,7 @@
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/layout.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/custom.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo C('STATIC_URL');?>css/backed-style.css" rel="stylesheet" type="text/css" />
         <!-- END THEME LAYOUT STYLES -->
         <link rel="shortcut icon" href="favicon.ico" />
     </head>
@@ -591,6 +592,15 @@
             <!-- END CONTENT BODY -->
         </div>
         <!-- END CONTENT -->
+        <div class="loading">
+            <div class="loading-inner line-scale">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
         <!-- BEGIN QUICK SIDEBAR -->
         <a href="javascript:;" class="page-quick-sidebar-toggler">
             <i class="icon-login"></i>

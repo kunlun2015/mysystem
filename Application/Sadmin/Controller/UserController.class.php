@@ -12,9 +12,13 @@ class UserController extends AdminController {
 
     public function index(){        
         $this->assign('page_title', $this->page_title.'用户管理');
-        $sys_admin = M('sys_admin');
-        $list      = $sys_admin->select();
+        $sys_admin  = M('sys_admin');
+        $count      = $sys_admin->count();
+        $Page       = new \Think\Page($count, 10);
+        $pagination = $Page->show(); 
+        $list       = $sys_admin->limit($Page->firstRow.','.$Page->listRows)->select();
         $this->assign('list', $list);
+        $this->assign('pagination', $pagination);
         $this->display();
     }
 
@@ -48,5 +52,18 @@ class UserController extends AdminController {
             }
             exit(json_encode($return));
         }
+    }
+
+    //获取用户详细信息
+    public function userInfo(){
+        $id = I('post.id', 0, 'int');
+        $sys_admin = M('sys_admin');
+        $rst = $sys_admin->field('id, name, realname, email, remark')->where("id=$id")->find();
+        if($rst){
+            $return = array('status' => 'success', 'data' => $rst, 'msg' => '数据获取成功！');
+        }else{
+            $return = array('status' => 'fail', 'msg' => '数据获取失败，请重试！');
+        }
+        exit(json_encode($return));
     }
 }
