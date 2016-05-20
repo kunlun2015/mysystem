@@ -2,7 +2,7 @@
 return array(
 	//'配置项'=>'配置值'
     'site_url' => 'http://localhost/personal/mysystem/',
-    'SHOW_PAGE_TRACE' =>true,
+    'SHOW_PAGE_TRACE' =>false,
 
     'URL_MODEL' => 2,
 
