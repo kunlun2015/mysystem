@@ -1,0 +1,29 @@
+[ 2016-05-20T13:20:08+08:00 ] ::1 /amos/git/mysystem/Sadmin/Login/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002165s ]
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0086s ]
+SQL: SELECT `id`,`name`,`password`,`encrypt` FROM `kl_sys_admin` WHERE ( name='kunlun' ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-05-20T13:20:10+08:00 ] ::1 /amos/git/mysystem/Sadmin/Login/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002054s ]
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0065s ]
+SQL: SELECT `id`,`name`,`password`,`encrypt` FROM `kl_sys_admin` WHERE ( name='kunlun' ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-05-20T13:25:30+08:00 ] ::1 /amos/git/mysystem/Sadmin/user/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003102s ]
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `kl_sys_admin` WHERE `name` = 'kunlun' LIMIT 1   [ RunTime:0.0006s ]
+SQL: INSERT INTO `kl_sys_admin` (`name`,`realname`,`email`,`encrypt`,`password`) VALUES ('kunlun','孙振环','735767227@qq.com','zTbkcQCM','7b829d86d08f69ce28195abdd4aa84a5') [ RunTime:0.0217s ]
+
+[ 2016-05-20T13:26:00+08:00 ] ::1 /amos/git/mysystem/Sadmin/Login/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007635s ]
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0061s ]
+SQL: SELECT `id`,`name`,`password`,`encrypt` FROM `kl_sys_admin` WHERE ( name='kunlun' ) LIMIT 1   [ RunTime:0.0005s ]
+

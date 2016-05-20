@@ -590,21 +590,7 @@
     <div class="row">
         <div class="col-md-12">
             <!-- BEGIN EXAMPLE TABLE PORTLET-->
-            <div class="portlet light ">
-                <div class="portlet-title">
-                    <div class="caption font-dark">
-                        <i class="icon-settings font-dark"></i>
-                        <span class="caption-subject bold uppercase"> Managed Table</span>
-                    </div>
-                    <div class="actions">
-                        <div class="btn-group btn-group-devided" data-toggle="buttons">
-                            <label class="btn btn-transparent dark btn-outline btn-circle btn-sm active">
-                                <input type="radio" name="options" class="toggle" id="option1">Actions</label>
-                            <label class="btn btn-transparent dark btn-outline btn-circle btn-sm">
-                                <input type="radio" name="options" class="toggle" id="option2">Settings</label>
-                        </div>
-                    </div>
-                </div>
+            <div class="portlet light ">                
                 <div class="portlet-body">
                     <div class="table-toolbar">
                         <div class="row">
@@ -656,9 +642,14 @@
                                 <td><?php echo ($data["name"]); ?></td>
                                 <td><?php echo ($data["realname"]); ?></td>
                                 <td><?php echo ($data["email"]); ?></td>
-                                <td class="center"><?php echo ($data["status"]); ?></td>
+                                <td class="center">
+                                <?php if($data["status"] == 0): ?><span class="label label-sm label-success">有效</span>
+                                    <?php elseif($data["status"] == 1): ?><span class="label label-sm label-danger">已禁用</span><?php endif; ?>
+                                </td>
                                 <td>
-                                    <span class="label label-sm label-default"> Blocked </span>
+                                    <a href="">编辑</a>
+                                    <a href="">修改密码</a>
+                                    <a href="">删除</a>
                                 </td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?>                            
                             
