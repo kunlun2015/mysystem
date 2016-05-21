@@ -477,3 +477,34 @@ INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001085s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001228s ]
 ERR: 非法操作:static
 
+[ 2016-05-21T11:19:18+08:00 ] ::1 /amos/git/mysystem/index.php/Sadmin/Login/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001935s ]
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0525s ]
+SQL: SELECT `id`,`name`,`password`,`encrypt` FROM `kl_sys_admin` WHERE ( name='kunlun' ) LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2016-05-21T11:41:58+08:00 ] ::1 /amos/git/mysystem/Sadmin/User/userInfo.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001694s ]
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0245s ]
+ERR: 1054:Unknown column 'remark' in 'field list'
+ [ SQL语句 ] : SELECT `id`,`name`,`realname`,`email`,`remark` FROM `kl_sys_admin` WHERE ( id=1 ) LIMIT 1  
+ERR: 1054:Unknown column 'remark' in 'field list'
+ [ SQL语句 ] : SELECT `id`,`name`,`realname`,`email`,`remark` FROM `kl_sys_admin` WHERE ( id=1 ) LIMIT 1  
+
+[ 2016-05-21T11:44:12+08:00 ] ::1 /amos/git/mysystem/Sadmin/User/userInfo.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001907s ]
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0127s ]
+SQL: SELECT `id`,`name`,`realname`,`email`,`remark` FROM `kl_sys_admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-05-21T11:44:23+08:00 ] ::1 /amos/git/mysystem/Sadmin/User/userInfo.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000925s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001710s ]
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0206s ]
+SQL: SELECT `id`,`name`,`realname`,`email`,`remark` FROM `kl_sys_admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+

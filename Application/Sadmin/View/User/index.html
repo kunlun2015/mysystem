@@ -284,6 +284,7 @@
                 submitHandler:function(e){
                     $(".alert-danger").hide();
                     $(".alert-success").show();
+                    loading();
                     $.ajax({
                             url: '{:U('Sadmin/user/add')}',
                             type: 'POST',
@@ -316,8 +317,8 @@
                                         }
                                     })
                                 }
-                            }
-
+                                loadingRemove();
+                            }                            
                         })
                     return false;
                 }
@@ -325,6 +326,7 @@
             //编辑用户
             $('.edit').click(function(){
                 var id = $(this).data('id');
+                loading();
                 $.post('{:U('Sadmin/User/userInfo')}', {id: id}, function(data){
                     if(data.status == 'success'){
                         $('#modal-edit-user').find("input[name='username']").val(data.data.name);
@@ -344,10 +346,11 @@
                             }
                         })
                     }
+                    loadingRemove();
                 }, 'json')                
                 return false;
             })            
-        })
+        })    
     </script>    
     </body>
 </html>

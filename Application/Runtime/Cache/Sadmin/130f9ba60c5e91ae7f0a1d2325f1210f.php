@@ -795,18 +795,7 @@
             <!-- END PAGE CONTENT BODY -->
             <!-- END CONTENT BODY -->
         </div>
-        <!-- END CONTENT -->
-        <div class="loading-block">
-            <div class="loading">
-                <div class="loading-inner line-scale">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        </div>
+        <!-- END CONTENT -->        
         <!-- BEGIN QUICK SIDEBAR -->
         <a href="javascript:;" class="page-quick-sidebar-toggler">
             <i class="icon-login"></i>
@@ -1473,6 +1462,7 @@
     <script src="<?php echo C('STATIC_URL');?>assets/layouts/layout3/scripts/layout.min.js" type="text/javascript"></script>
     <script src="<?php echo C('STATIC_URL');?>assets/layouts/layout3/scripts/demo.min.js" type="text/javascript"></script>
     <script src="<?php echo C('STATIC_URL');?>assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+    <script src="<?php echo C('STATIC_URL');?>js/commen.js" type="text/javascript"></script>
     <!-- END THEME LAYOUT SCRIPTS -->
     <script>    
         $(function(){
@@ -1533,6 +1523,7 @@
                 submitHandler:function(e){
                     $(".alert-danger").hide();
                     $(".alert-success").show();
+                    loading();
                     $.ajax({
                             url: '<?php echo U('Sadmin/user/add');?>',
                             type: 'POST',
@@ -1565,8 +1556,8 @@
                                         }
                                     })
                                 }
-                            }
-
+                                loadingRemove();
+                            }                            
                         })
                     return false;
                 }
@@ -1574,6 +1565,7 @@
             //编辑用户
             $('.edit').click(function(){
                 var id = $(this).data('id');
+                loading();
                 $.post('<?php echo U('Sadmin/User/userInfo');?>', {id: id}, function(data){
                     if(data.status == 'success'){
                         $('#modal-edit-user').find("input[name='username']").val(data.data.name);
@@ -1593,10 +1585,11 @@
                             }
                         })
                     }
+                    loadingRemove();
                 }, 'json')                
                 return false;
             })            
-        })
+        })    
     </script>    
     </body>
 </html>

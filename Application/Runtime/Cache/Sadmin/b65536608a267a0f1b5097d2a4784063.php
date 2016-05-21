@@ -591,16 +591,7 @@
             <!-- END PAGE CONTENT BODY -->
             <!-- END CONTENT BODY -->
         </div>
-        <!-- END CONTENT -->
-        <div class="loading">
-            <div class="loading-inner line-scale">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
+        <!-- END CONTENT -->        
         <!-- BEGIN QUICK SIDEBAR -->
         <a href="javascript:;" class="page-quick-sidebar-toggler">
             <i class="icon-login"></i>
@@ -1267,4 +1258,5 @@
     <script src="<?php echo C('STATIC_URL');?>assets/layouts/layout3/scripts/layout.min.js" type="text/javascript"></script>
     <script src="<?php echo C('STATIC_URL');?>assets/layouts/layout3/scripts/demo.min.js" type="text/javascript"></script>
     <script src="<?php echo C('STATIC_URL');?>assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+    <script src="<?php echo C('STATIC_URL');?>js/commen.js" type="text/javascript"></script>
     <!-- END THEME LAYOUT SCRIPTS -->
