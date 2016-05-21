@@ -13,7 +13,8 @@
         <meta content="" name="description" />
         <meta content="" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" /> -->
+        <link href="http://fonts.useso.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -750,7 +751,7 @@
                     <button class="close" data-close="alert"></button> Your form validation is successful! 
                 </div>
                 <div class="portlet-body form">
-                    <form class="form-horizontal form-add-user" role="form" novalidate="novalidate">
+                    <form class="form-horizontal form-edit-user" role="form" novalidate="novalidate">
                         <div class="form-body">
                             <div class="form-group">
                                 <label class="col-md-2 control-label">用户名</label>
@@ -776,6 +777,7 @@
                                     <textarea name="remark" id="remark" class="form-control" placeholder="登录用户的备注信息"></textarea>
                                 </div>
                             </div>
+                            <input type="hidden" name="user_id">
                         </div>
                     </form>
                 </div>
@@ -783,6 +785,58 @@
             <div class="modal-footer">
                 <button type="button" class="btn dark btn-outline" data-dismiss="modal">取消</button>
                 <button type="button" class="btn green submit-edit-user">确定</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- END Modals-->
+<!-- BEGIN Modals-->
+<!--修改密码-->
+ <div class="modal fade" id="modal-edit-psd" tabindex="-1"  data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title"><i class="fa fa-user-plus font-green"></i> 修改密码</h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-danger display-hide">
+                    <button class="close" data-close="alert"></button> You have some form errors. Please check below. 
+                </div>
+                <div class="alert alert-success display-hide">
+                    <button class="close" data-close="alert"></button> Your form validation is successful! 
+                </div>
+                <div class="portlet-body form">
+                    <form class="form-horizontal form-edit-psd" role="form" novalidate="novalidate">
+                        <div class="form-body">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">原密码</label>
+                                <div class="col-md-10">
+                                    <input type="password" name="password_old" class="form-control" placeholder="请输入原登录密码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">新密码</label>
+                                <div class="col-md-10">
+                                    <input type="password" name="password" id="password_new" class="form-control" placeholder="请输入新的登录密码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">确认密码</label>
+                                <div class="col-md-10">
+                                    <input type="password" name="password_confirm" class="form-control" placeholder="请再次输入新密码">
+                                </div>
+                            </div>                          
+                            <input type="hidden" name="user_id">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn dark btn-outline" data-dismiss="modal">取消</button>
+                <button type="button" class="btn green submit-edit-psd">确定</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -1572,6 +1626,7 @@
                         $('#modal-edit-user').find("input[name='realname']").val(data.data.realname);
                         $('#modal-edit-user').find("input[name='email']").val(data.data.email);
                         $('#modal-edit-user').find("input[name='remark']").val(data.data.remark);
+                        $('#modal-edit-user').find("input[name='user_id']").val(id);
                         $('#modal-edit-user').modal('show');                        
                     }else{
                         bootbox.dialog({
@@ -1588,7 +1643,173 @@
                     loadingRemove();
                 }, 'json')                
                 return false;
-            })            
+            })
+            $('.submit-edit-user').click(function(){
+                $('.form-edit-user').submit();
+            })
+            $('.form-edit-user').validate({
+                errorElement:"span",
+                errorClass:"help-block",
+                focusInvalid:!1,
+                rules:{
+                    realname: {required:!0},
+                    email: {required: true, email: true}
+                },
+                messages:{                                        
+                    realname: {
+                        required: "请输入登录用户的真实姓名"
+                    },
+                    email: {
+                        required: "请输入登录用户的E-mail",
+                        email: "email格式正确"
+                    }
+                },
+                invalidHandler:function(e,r){
+                    $(".alert-danger").show();
+                    $(".alert-success").hide();
+                },
+                highlight:function(e){
+                    $(".alert-danger").show();
+                    $(".alert-success").hide();
+                    $(e).closest(".form-group").addClass("has-error")
+                },
+                unhighlight:function(e){
+                    $(e).closest(".form-group").removeClass("has-error")
+                },
+                success:function(e){                    
+                    e.closest(".form-group").removeClass("has-error"),e.remove()
+                },
+                submitHandler:function(e){
+                    $(".alert-danger").hide();
+                    $(".alert-success").show();
+                    loading();
+                    $.ajax({
+                            url: '<?php echo U('Sadmin/user/edit');?>',
+                            type: 'POST',
+                            data: $('.form-edit-user').serialize(),
+                            dataType: 'json',
+                            success: function(data){
+                                if(data.status == 'success'){
+                                    bootbox.dialog({
+                                        message: data.msg,
+                                        title: "温馨提示：",
+                                        buttons:{
+                                            success:{
+                                                label: "确定",
+                                                className: "green",
+                                                callback: function(){
+                                                    window.location.reload();
+                                                }
+                                            }
+                                        }
+                                    })
+                                }else{
+                                    bootbox.dialog({
+                                        message: data.msg,
+                                        title: "温馨提示：",
+                                        buttons:{
+                                            success:{
+                                                label: "确定",
+                                                className: "green"
+                                            }
+                                        }
+                                    })
+                                }
+                                loadingRemove();
+                            }                            
+                        })
+                    return false;
+                }
+            })
+            //修改登录密码
+            $('.edit-psd').click(function(){
+                var id = $(this).data('id');
+                $('.form-edit-psd').find("input[name='user_id']").val(id);
+                $('#modal-edit-psd').modal('show'); 
+                return false;
+            })
+            $('.submit-edit-psd').click(function(){
+                $('.form-edit-psd').submit();
+            })
+            $('.form-edit-psd').validate({
+                errorElement:"span",
+                errorClass:"help-block",
+                focusInvalid:!1,
+                rules:{
+                    password_old: {required:!0},                   
+                    password: {required:!0, minlength:6},                   
+                    password_confirm: {required:!0, equalTo: "#password_new"},                   
+                },
+                messages:{                                        
+                    password_old: {
+                        required: "请输入原登录密码"
+                    },
+                    password: {
+                        required: "请输入新的登录密码",
+                        minlength: "密码不能少于6位"
+                    },
+                    password_confirm: {
+                        required: "请再次输入新密码",
+                        equalTo: "两次密码填写不一致"
+                    }
+                },
+                invalidHandler:function(e,r){
+                    $(".alert-danger").show();
+                    $(".alert-success").hide();
+                },
+                highlight:function(e){
+                    $(".alert-danger").show();
+                    $(".alert-success").hide();
+                    $(e).closest(".form-group").addClass("has-error")
+                },
+                unhighlight:function(e){
+                    $(e).closest(".form-group").removeClass("has-error")
+                },
+                success:function(e){                    
+                    e.closest(".form-group").removeClass("has-error"),e.remove()
+                },
+                submitHandler:function(e){
+                    $(".alert-danger").hide();
+                    $(".alert-success").show();
+                    loading();
+                    $.ajax({
+                            url: '<?php echo U('Sadmin/user/editPsd');?>',
+                            type: 'POST',
+                            data: $('.form-edit-psd').serialize(),
+                            dataType: 'json',
+                            success: function(data){
+                                if(data.status == 'success'){
+                                    bootbox.dialog({
+                                        message: data.msg,
+                                        title: "温馨提示：",
+                                        buttons:{
+                                            success:{
+                                                label: "确定",
+                                                className: "green",
+                                                callback: function(){
+                                                    window.location.reload();
+                                                }
+                                            }
+                                        }
+                                    })
+                                }else{
+                                    bootbox.dialog({
+                                        message: data.msg,
+                                        title: "温馨提示：",
+                                        buttons:{
+                                            success:{
+                                                label: "确定",
+                                                className: "green"
+                                            }
+                                        }
+                                    })
+                                }
+                                loadingRemove();
+                            }                            
+                        })
+                    return false;
+                }
+            })
         })    
     </script>    
     </body>
