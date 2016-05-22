@@ -13,7 +13,8 @@
         <meta content="" name="description" />
         <meta content="" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" /> -->
+        <link href="http://fonts.useso.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -32,6 +33,7 @@
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/layout.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/custom.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo C('STATIC_URL');?>css/backed-style.css" rel="stylesheet" type="text/css" />
         <!-- END THEME LAYOUT STYLES -->
         <link rel="shortcut icon" href="favicon.ico" />
     </head>
@@ -346,7 +348,7 @@
                             <li class="dropdown dropdown-user dropdown-dark">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                     <img alt="" class="img-circle" src="<?php echo C('STATIC_URL');?>assets/layouts/layout3/img/avatar9.jpg">
-                                    <span class="username username-hide-mobile">Nick</span>
+                                    <span class="username username-hide-mobile"><?php echo ($login_info['name']); ?></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
                                     <li>
@@ -590,7 +592,7 @@
             <!-- END PAGE CONTENT BODY -->
             <!-- END CONTENT BODY -->
         </div>
-        <!-- END CONTENT -->
+        <!-- END CONTENT -->        
         <!-- BEGIN QUICK SIDEBAR -->
         <a href="javascript:;" class="page-quick-sidebar-toggler">
             <i class="icon-login"></i>
@@ -1244,6 +1246,7 @@
     <script src="<?php echo C('STATIC_URL');?>assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
     <script src="<?php echo C('STATIC_URL');?>assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
     <script src="<?php echo C('STATIC_URL');?>assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="<?php echo C('STATIC_URL');?>assets/global/plugins/bootbox/bootbox.min.js" type="text/javascript"></script>
     <!-- END PAGE LEVEL PLUGINS -->        
     <!-- BEGIN THEME GLOBAL SCRIPTS -->
     <script src="<?php echo C('STATIC_URL');?>assets/global/scripts/app.min.js" type="text/javascript"></script>
@@ -1256,4 +1259,5 @@
     <script src="<?php echo C('STATIC_URL');?>assets/layouts/layout3/scripts/layout.min.js" type="text/javascript"></script>
     <script src="<?php echo C('STATIC_URL');?>assets/layouts/layout3/scripts/demo.min.js" type="text/javascript"></script>
     <script src="<?php echo C('STATIC_URL');?>assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+    <script src="<?php echo C('STATIC_URL');?>js/commen.js" type="text/javascript"></script>
     <!-- END THEME LAYOUT SCRIPTS -->

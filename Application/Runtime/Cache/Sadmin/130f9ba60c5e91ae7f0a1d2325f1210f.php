@@ -644,7 +644,7 @@
                                 <td><?php echo ($data["name"]); ?></td>
                                 <td><?php echo ($data["realname"]); ?></td>
                                 <td><?php echo ($data["email"]); ?></td>
-                                <td class="center">
+                                <td class="center user-status">
                                 <?php if($data["status"] == 0): ?><span class="label label-sm label-success">有效</span>
                                     <?php elseif($data["status"] == 1): ?><span class="label label-sm label-danger">已禁用</span><?php endif; ?>
                                 </td>
@@ -1625,7 +1625,7 @@
                         $('#modal-edit-user').find("input[name='username']").val(data.data.name);
                         $('#modal-edit-user').find("input[name='realname']").val(data.data.realname);
                         $('#modal-edit-user').find("input[name='email']").val(data.data.email);
-                        $('#modal-edit-user').find("input[name='remark']").val(data.data.remark);
+                        $('#modal-edit-user').find("textarea[name='remark']").val(data.data.remark);
                         $('#modal-edit-user').find("input[name='user_id']").val(id);
                         $('#modal-edit-user').modal('show');                        
                     }else{
@@ -1809,6 +1809,54 @@
                         })
                     return false;
                 }
+            })
+            //禁用用户
+            $('.disabled').click(function(){
+                var _this = $(this);
+                bootbox.dialog({
+                    message: "确定要禁用吗？禁用用户无法登陆",
+                    title: "温馨提示：",
+                    buttons:{
+                        success: {
+                            label: "确定",
+                            className: "green",
+                            callback: function(){
+                                loading();
+                                $.post('<?php echo U('Sadmin/User/disabled');?>', {id: _this.data('id')}, function(data){
+                                    if(data.status == 'success'){
+                                        _this.parent().parent().find('.user-status').html('<span class="label label-sm label-danger">已禁用</span>');
+                                        bootbox.dialog({
+                                            message: data.msg,
+                                            title: "温馨提示：",
+                                            buttons: {
+                                                success:{
+                                                    label: "确定",
+                                                    className: "green"
+                                                }                            
+                                            }
+                                        })
+                                    }else{
+                                        bootbox.dialog({
+                                            message: data.msg,
+                                            title: "温馨提示：",
+                                            buttons: {
+                                                success:{
+                                                    label: "确定",
+                                                    className: "green"
+                                                }                            
+                                            }
+                                        })
+                                    }
+                                    loadingRemove();
+                                }, 'json')
+                            }
+                        },
+                        cancel: {
+                            label: "取消",
+                            className: "red"
+                        }
+                    }
+                })
             })
         })    
     </script>    

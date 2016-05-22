@@ -25,7 +25,7 @@ class UserController extends AdminController {
     public function add(){
         if(IS_POST && IS_AJAX){
             $data = array(
-                        'name' => I('post.username', '', 'htmlspecialchars'),
+                        'name'     => I('post.username', '', 'htmlspecialchars'),
                         'realname' => I('post.realname', '', 'htmlspecialchars'),
                         'email'    => I('post.email', '', 'htmlspecialchars'),                       
                         'remark'   => I('post.remark', '', 'htmlspecialchars')
@@ -88,7 +88,7 @@ class UserController extends AdminController {
         $id               = I('post.user_id', 0, 'int');
         $password_old     = I('post.password_old', '', 'htmlspecialchars');   
         $password         = I('post.password', '', 'htmlspecialchars');     
-        $sys_admin = M('sys_admin');
+        $sys_admin        = M('sys_admin');
         //验证原密码是否正确
         $rst = $sys_admin->field('password, encrypt')->where("id=$id")->find();
         if($rst){            
@@ -110,5 +110,19 @@ class UserController extends AdminController {
             $return = array('status' => 'fail', 'msg' => '用户不存在!');           
         }
         exit(json_encode($return));      
+    }
+
+    //禁用用户
+    public function disabled(){
+        $id        = I('post.id', 0, 'int');
+        $sys_admin = M('sys_admin');
+        $data      = array('status' => 1);
+        $rst       = $sys_admin->where("id=$id")->data($data)->save();
+        if($rst){
+            $return = array('status' => 'success', 'msg' => '用户已成功禁用！');
+        }else{
+            $return = array('status' => 'fail', 'msg' => '用户禁用失败，请稍后重试！');
+        }
+        exit(json_encode($return));
     }
 }

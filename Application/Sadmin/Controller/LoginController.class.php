@@ -33,6 +33,13 @@ class LoginController extends Controller {
             }
             exit(json_encode($return));
         }
+        //判断是否已登录，如果已登录则跳转到首页
+        $s_login_info = session('s_login_info');
+        if($s_login_info){
+            $url = U('Sadmin/Index/index');
+            header("Location: $url");
+            exit();
+        }
         $this->display();
     }
 
