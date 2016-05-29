@@ -14,8 +14,13 @@ class LoginController extends Controller {
             $name     = I('post.username', '', 'htmlspecialchars');
             $password = I('post.password', '', 'htmlspecialchars');
             $sys_admin = M('sys_admin');
-            $rst = $sys_admin->field('id, name, password, encrypt')->where("name='{$name}'")->find();
+            $rst = $sys_admin->field('id, name, password, encrypt, status')->where("name='{$name}' and status != 2")->find();
             if($rst){
+                //是否已禁用
+                if($rst['status'] == 1){
+                    $return = array('status' => 'fail', 'msg' => '您的登陆账号已被禁用！');
+                    exit(json_encode($return));
+                }
                 $input_psd = md5(md5($password).$rst['encrypt']);
                 if($input_psd === $rst['password']){
                     //登陆成功

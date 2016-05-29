@@ -33,7 +33,7 @@
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/layout.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/custom.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo C('STATIC_URL');?>css/backed-style.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo C('STATIC_URL');?>css/backed-style.css" rel="stylesheet" type="text/css" />        
         <!-- END THEME LAYOUT STYLES -->
         <link rel="shortcut icon" href="favicon.ico" />
     </head>
@@ -353,7 +353,7 @@
                                 <ul class="dropdown-menu dropdown-menu-default">
                                     <li>
                                         <a href="<?php echo U('Sadmin/My/profile');?>">
-                                            <i class="icon-user"></i> My Profile </a>
+                                            <i class="icon-user"></i> 我的信息 </a>
                                     </li>
                                     <li>
                                         <a href="app_calendar.html">
@@ -378,7 +378,7 @@
                                     </li>
                                     <li>
                                         <a href="javascript:void(0);" class="logout">
-                                            <i class="icon-key"></i> Log Out </a>
+                                            <i class="icon-key"></i> 退出登录 </a>
                                     </li>
                                 </ul>
                             </li>
@@ -569,6 +569,7 @@
                 <!-- BEGIN PAGE CONTENT BODY -->
                 <div class="page-content">
                     <div class="container">
+<link href="<?php echo C('STATIC_URL');?>assets/pages/css/profile.min.css" rel="stylesheet" type="text/css" />
 <!-- BEGIN PAGE BREADCRUMBS -->
 <ul class="page-breadcrumb breadcrumb">
     <li>
@@ -576,274 +577,102 @@
         <i class="fa fa-circle"></i>
     </li>
     <li>
-        <span>用户管理</span>
-        <i class="fa fa-circle"></i>
-    </li>
-    <li>
-        <span>用户列表</span>
+        <span>我的信息</span>
     </li>
 </ul>
 <!-- END PAGE BREADCRUMBS -->
 <!-- BEGIN PAGE CONTENT INNER -->
 <div class="page-content-inner">
     <div class="note note-info">
-        <p>用户管理</p>
+        <p>个人信息管理</p>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <!-- BEGIN EXAMPLE TABLE PORTLET-->
-            <div class="portlet light ">                
-                <div class="portlet-body">
-                    <div class="table-toolbar">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="btn-group">
-                                    <button id="bt-add-user" class="btn sbold green"> 添加用户
-                                        <i class="fa fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="btn-group pull-right">
-                                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">Tools
-                                        <i class="fa fa-angle-down"></i>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li>
-                                            <a href="javascript:;">
-                                                <i class="fa fa-print"></i> Print </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <i class="fa fa-file-pdf-o"></i> Save as PDF </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <i class="fa fa-file-excel-o"></i> Export to Excel </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+            <div class="profile-sidebar">
+                <!-- PORTLET MAIN -->
+                <div class="portlet light profile-sidebar-portlet ">
+                    <!-- SIDEBAR USERPIC -->
+                    <div class="profile-userpic">
+                        <img src="http://localhost/personal/mysystem/static/backed/assets/layouts/layout3/img/profile_user.jpg" class="img-responsive" alt="">
+                        <span class="edit-avatar"><i>修改头像</i><em></em></span>
+                    </div>
+                    <!-- END SIDEBAR USERPIC -->
+                    <!-- SIDEBAR USER TITLE -->
+                    <div class="profile-usertitle">
+                        <div class="profile-usertitle-name"> Marcus Doe </div>
+                        <div class="profile-usertitle-job"> Developer </div>
+                    </div>
+                    <!-- END SIDEBAR USER TITLE -->
+                    <!-- SIDEBAR BUTTONS -->
+                    <div class="profile-userbuttons">
+                        <button type="button" class="btn btn-circle green btn-sm">Follow</button>
+                        <button type="button" class="btn btn-circle red btn-sm">Message</button>
+                    </div>
+                    <!-- END SIDEBAR BUTTONS -->
+                    <!-- SIDEBAR MENU -->
+                    <div class="profile-usermenu">
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="page_user_profile_1.html">
+                                    <i class="icon-home"></i> Overview </a>
+                            </li>
+                            <li>
+                                <a href="page_user_profile_1_account.html">
+                                    <i class="icon-settings"></i> Account Settings </a>
+                            </li>
+                            <li>
+                                <a href="page_user_profile_1_help.html">
+                                    <i class="icon-info"></i> Help </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END MENU -->
+                </div>
+                <!-- END PORTLET MAIN -->
+                <!-- PORTLET MAIN -->
+                <div class="portlet light ">
+                    <!-- STAT -->
+                    <div class="row list-separated profile-stat">
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="uppercase profile-stat-title"> 37 </div>
+                            <div class="uppercase profile-stat-text"> Projects </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="uppercase profile-stat-title"> 51 </div>
+                            <div class="uppercase profile-stat-text"> Tasks </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="uppercase profile-stat-title"> 61 </div>
+                            <div class="uppercase profile-stat-text"> Uploads </div>
                         </div>
                     </div>
-                    <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
-                        <thead>
-                            <tr>
-                                <th>
-                                    <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" /> </th>
-                                <th>用户名</th>
-                                <th>真实姓名</th>
-                                <th>邮箱</th>
-                                <th>状态</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody> 
-                            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?><tr class="odd gradeX">
-                                <td><input type="checkbox" class="checkboxes" value="1" /></td>
-                                <td><?php echo ($data["name"]); ?></td>
-                                <td><?php echo ($data["realname"]); ?></td>
-                                <td><?php echo ($data["email"]); ?></td>
-                                <td class="center user-status">
-                                <?php if($data["status"] == 0): ?><span class="label label-sm label-success">有效</span>
-                                    <?php elseif($data["status"] == 1): ?><span class="label label-sm label-danger">已禁用</span><?php endif; ?>
-                                </td>
-                                <td class="table-options">
-                                    <a class="edit" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">编辑</a>
-                                    <a class="edit-psd" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">修改密码</a>
-                                    <a class="disabled" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">禁用</a>
-                                    <a class="delete" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">删除</a>
-                                </td>
-                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </tbody>
-                    </table>
-                    <?php echo ($pagination); ?>
-                </div>
-            </div>
-            <!-- END EXAMPLE TABLE PORTLET-->
-        </div>
-    </div>
-</div>
-<!-- END PAGE CONTENT INNER -->
-<!-- BEGIN Modals-->
-<!--添加用户-->
- <div class="modal fade" id="modal-add-user" tabindex="-1"  data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title"><i class="fa fa-user-plus font-green"></i> 添加用户</h4>
-            </div>
-            <div class="modal-body">
-                <div class="alert alert-danger display-hide">
-                    <button class="close" data-close="alert"></button> You have some form errors. Please check below. 
-                </div>
-                <div class="alert alert-success display-hide">
-                    <button class="close" data-close="alert"></button> Your form validation is successful! 
-                </div>
-                <div class="portlet-body form">
-                    <form class="form-horizontal form-add-user" role="form" novalidate="novalidate">
-                        <div class="form-body">
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">用户名</label>
-                                <div class="col-md-10">
-                                    <input type="text" name="username" class="form-control" placeholder="请输入登录用户名">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">真实姓名</label>
-                                <div class="col-md-10">
-                                    <input type="text" name="realname" class="form-control" placeholder="请输入登录用户的真实姓名">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">E-mail</label>
-                                <div class="col-md-10">
-                                    <input type="text" name="email" id="email" class="form-control" placeholder="请输入登录用户的E-mail">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">登录密码</label>
-                                <div class="col-md-10">
-                                    <input type="password" name="password" id="password" class="form-control" placeholder="请输入登录密码">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">确认密码</label>
-                                <div class="col-md-10">
-                                    <input type="password" name="password_confirm" class="form-control" placeholder="请重新输入登录密码">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">备注</label>
-                                <div class="col-md-10">
-                                    <textarea name="remark" id="remark" class="form-control" placeholder="登录用户的备注信息"></textarea>
-                                </div>
-                            </div>
+                    <!-- END STAT -->
+                    <div>
+                        <h4 class="profile-desc-title">About Marcus Doe</h4>
+                        <span class="profile-desc-text"> Lorem ipsum dolor sit amet diam nonummy nibh dolore. </span>
+                        <div class="margin-top-20 profile-desc-link">
+                            <i class="fa fa-globe"></i>
+                            <a href="http://www.keenthemes.com">www.keenthemes.com</a>
                         </div>
-                    </form>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn dark btn-outline" data-dismiss="modal">取消</button>
-                <button type="button" class="btn green submit-add-user">确定</button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- END Modals-->
-<!-- BEGIN Modals-->
-<!--编辑用户-->
- <div class="modal fade" id="modal-edit-user" tabindex="-1"  data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title"><i class="fa fa-user-plus font-green"></i> 编辑用户</h4>
-            </div>
-            <div class="modal-body">
-                <div class="alert alert-danger display-hide">
-                    <button class="close" data-close="alert"></button> You have some form errors. Please check below. 
-                </div>
-                <div class="alert alert-success display-hide">
-                    <button class="close" data-close="alert"></button> Your form validation is successful! 
-                </div>
-                <div class="portlet-body form">
-                    <form class="form-horizontal form-edit-user" role="form" novalidate="novalidate">
-                        <div class="form-body">
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">用户名</label>
-                                <div class="col-md-10">
-                                    <input type="text" name="username" class="form-control" placeholder="请输入登录用户名" readonly="readonly">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">真实姓名</label>
-                                <div class="col-md-10">
-                                    <input type="text" name="realname" class="form-control" placeholder="请输入登录用户的真实姓名">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">E-mail</label>
-                                <div class="col-md-10">
-                                    <input type="text" name="email" id="email" class="form-control" placeholder="请输入登录用户的E-mail">
-                                </div>
-                            </div>                            
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">备注</label>
-                                <div class="col-md-10">
-                                    <textarea name="remark" id="remark" class="form-control" placeholder="登录用户的备注信息"></textarea>
-                                </div>
-                            </div>
-                            <input type="hidden" name="user_id">
+                        <div class="margin-top-20 profile-desc-link">
+                            <i class="fa fa-twitter"></i>
+                            <a href="http://www.twitter.com/keenthemes/">@keenthemes</a>
                         </div>
-                    </form>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn dark btn-outline" data-dismiss="modal">取消</button>
-                <button type="button" class="btn green submit-edit-user">确定</button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- END Modals-->
-<!-- BEGIN Modals-->
-<!--修改密码-->
- <div class="modal fade" id="modal-edit-psd" tabindex="-1"  data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title"><i class="fa fa-user-plus font-green"></i> 修改密码</h4>
-            </div>
-            <div class="modal-body">
-                <div class="alert alert-danger display-hide">
-                    <button class="close" data-close="alert"></button> You have some form errors. Please check below. 
-                </div>
-                <div class="alert alert-success display-hide">
-                    <button class="close" data-close="alert"></button> Your form validation is successful! 
-                </div>
-                <div class="portlet-body form">
-                    <form class="form-horizontal form-edit-psd" role="form" novalidate="novalidate">
-                        <div class="form-body">
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">原密码</label>
-                                <div class="col-md-10">
-                                    <input type="password" name="password_old" class="form-control" placeholder="请输入原登录密码">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">新密码</label>
-                                <div class="col-md-10">
-                                    <input type="password" name="password" id="password_new" class="form-control" placeholder="请输入新的登录密码">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">确认密码</label>
-                                <div class="col-md-10">
-                                    <input type="password" name="password_confirm" class="form-control" placeholder="请再次输入新密码">
-                                </div>
-                            </div>                          
-                            <input type="hidden" name="user_id">
+                        <div class="margin-top-20 profile-desc-link">
+                            <i class="fa fa-facebook"></i>
+                            <a href="http://www.facebook.com/keenthemes/">keenthemes</a>
                         </div>
-                    </form>
+                    </div>
                 </div>
+                <!-- END PORTLET MAIN -->
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn dark btn-outline" data-dismiss="modal">取消</button>
-                <button type="button" class="btn green submit-edit-psd">确定</button>
+            <div class="profile-content">
+                
+                          
             </div>
         </div>
-        <!-- /.modal-content -->
     </div>
-    <!-- /.modal-dialog -->
 </div>
-<!-- END Modals-->
                </div>
             </div>
             <!-- END PAGE CONTENT BODY -->
@@ -1518,397 +1347,3 @@
     <script src="<?php echo C('STATIC_URL');?>assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
     <script src="<?php echo C('STATIC_URL');?>js/commen.js" type="text/javascript"></script>
     <!-- END THEME LAYOUT SCRIPTS -->
-    <script>    
-        $(function(){
-            //添加用户
-            $('#bt-add-user').click(function(){
-                $('#modal-add-user').modal('show');
-                return false;
-            })
-            $('.submit-add-user').click(function(){
-                $('.form-add-user').submit();
-            })
-            $('.form-add-user').validate({
-                errorElement:"span",
-                errorClass:"help-block",
-                focusInvalid:!1,
-                rules:{
-                    username: {required:!0},
-                    realname: {required:!0},
-                    email: {required: true, email: true},
-                    password: {required: true, minlength:6},
-                    password_confirm: {required: true, equalTo: "#password"}
-                },
-                messages:{
-                    username: {
-                        required: "请输入登录用户名"
-                    },                    
-                    realname: {
-                        required: "请输入登录用户的真实姓名"
-                    },
-                    email: {
-                        required: "请输入登录用户的E-mail",
-                        email: "email格式正确"
-                    },
-                    password: {
-                        required: "请输入登录密码",
-                        minlength: "密码不能少于6位"
-                    },
-                    password_confirm: {
-                        required: "请确认登陆密码",
-                        equalTo: "两次密码填写不一致"
-                    }
-                },
-                invalidHandler:function(e,r){
-                    $(".alert-danger").show();
-                    $(".alert-success").hide();
-                },
-                highlight:function(e){
-                    $(".alert-danger").show();
-                    $(".alert-success").hide();
-                    $(e).closest(".form-group").addClass("has-error")
-                },
-                unhighlight:function(e){
-                    $(e).closest(".form-group").removeClass("has-error")
-                },
-                success:function(e){                    
-                    e.closest(".form-group").removeClass("has-error"),e.remove()
-                },
-                submitHandler:function(e){
-                    $(".alert-danger").hide();
-                    $(".alert-success").show();
-                    loading();
-                    $.ajax({
-                            url: '<?php echo U('Sadmin/user/add');?>',
-                            type: 'POST',
-                            data: $('.form-add-user').serialize(),
-                            dataType: 'json',
-                            success: function(data){
-                                if(data.status == 'success'){
-                                    bootbox.dialog({
-                                        message: data.msg,
-                                        title: "温馨提示：",
-                                        buttons:{
-                                            success:{
-                                                label: "确定",
-                                                className: "green",
-                                                callback: function(){
-                                                    window.location.reload();
-                                                }
-                                            }
-                                        }
-                                    })
-                                }else{
-                                    bootbox.dialog({
-                                        message: data.msg,
-                                        title: "温馨提示：",
-                                        buttons:{
-                                            success:{
-                                                label: "确定",
-                                                className: "green"
-                                            }
-                                        }
-                                    })
-                                }
-                                loadingRemove();
-                            }                            
-                        })
-                    return false;
-                }
-            })
-            //编辑用户
-            $('.edit').click(function(){
-                var id = $(this).data('id');
-                loading();
-                $.post('<?php echo U('Sadmin/User/userInfo');?>', {id: id}, function(data){
-                    if(data.status == 'success'){
-                        $('#modal-edit-user').find("input[name='username']").val(data.data.name);
-                        $('#modal-edit-user').find("input[name='realname']").val(data.data.realname);
-                        $('#modal-edit-user').find("input[name='email']").val(data.data.email);
-                        $('#modal-edit-user').find("textarea[name='remark']").val(data.data.remark);
-                        $('#modal-edit-user').find("input[name='user_id']").val(id);
-                        $('#modal-edit-user').modal('show');                        
-                    }else{
-                        bootbox.dialog({
-                            message: data.msg,
-                            title: "温馨提示：",
-                            buttons:{
-                                success:{
-                                    label: "确定",
-                                    className: "green"
-                                }
-                            }
-                        })
-                    }
-                    loadingRemove();
-                }, 'json')                
-                return false;
-            })
-            $('.submit-edit-user').click(function(){
-                $('.form-edit-user').submit();
-            })
-            $('.form-edit-user').validate({
-                errorElement:"span",
-                errorClass:"help-block",
-                focusInvalid:!1,
-                rules:{
-                    realname: {required:!0},
-                    email: {required: true, email: true}
-                },
-                messages:{                                        
-                    realname: {
-                        required: "请输入登录用户的真实姓名"
-                    },
-                    email: {
-                        required: "请输入登录用户的E-mail",
-                        email: "email格式正确"
-                    }
-                },
-                invalidHandler:function(e,r){
-                    $(".alert-danger").show();
-                    $(".alert-success").hide();
-                },
-                highlight:function(e){
-                    $(".alert-danger").show();
-                    $(".alert-success").hide();
-                    $(e).closest(".form-group").addClass("has-error")
-                },
-                unhighlight:function(e){
-                    $(e).closest(".form-group").removeClass("has-error")
-                },
-                success:function(e){                    
-                    e.closest(".form-group").removeClass("has-error"),e.remove()
-                },
-                submitHandler:function(e){
-                    $(".alert-danger").hide();
-                    $(".alert-success").show();
-                    loading();
-                    $.ajax({
-                            url: '<?php echo U('Sadmin/user/edit');?>',
-                            type: 'POST',
-                            data: $('.form-edit-user').serialize(),
-                            dataType: 'json',
-                            success: function(data){
-                                if(data.status == 'success'){
-                                    bootbox.dialog({
-                                        message: data.msg,
-                                        title: "温馨提示：",
-                                        buttons:{
-                                            success:{
-                                                label: "确定",
-                                                className: "green",
-                                                callback: function(){
-                                                    window.location.reload();
-                                                }
-                                            }
-                                        }
-                                    })
-                                }else{
-                                    bootbox.dialog({
-                                        message: data.msg,
-                                        title: "温馨提示：",
-                                        buttons:{
-                                            success:{
-                                                label: "确定",
-                                                className: "green"
-                                            }
-                                        }
-                                    })
-                                }
-                                loadingRemove();
-                            }                            
-                        })
-                    return false;
-                }
-            })
-            //修改登录密码
-            $('.edit-psd').click(function(){
-                var id = $(this).data('id');
-                $('.form-edit-psd').find("input[name='user_id']").val(id);
-                $('#modal-edit-psd').modal('show'); 
-                return false;
-            })
-            $('.submit-edit-psd').click(function(){
-                $('.form-edit-psd').submit();
-            })
-            $('.form-edit-psd').validate({
-                errorElement:"span",
-                errorClass:"help-block",
-                focusInvalid:!1,
-                rules:{
-                    password_old: {required:!0},                   
-                    password: {required:!0, minlength:6},                   
-                    password_confirm: {required:!0, equalTo: "#password_new"},                   
-                },
-                messages:{                                        
-                    password_old: {
-                        required: "请输入原登录密码"
-                    },
-                    password: {
-                        required: "请输入新的登录密码",
-                        minlength: "密码不能少于6位"
-                    },
-                    password_confirm: {
-                        required: "请再次输入新密码",
-                        equalTo: "两次密码填写不一致"
-                    }
-                },
-                invalidHandler:function(e,r){
-                    $(".alert-danger").show();
-                    $(".alert-success").hide();
-                },
-                highlight:function(e){
-                    $(".alert-danger").show();
-                    $(".alert-success").hide();
-                    $(e).closest(".form-group").addClass("has-error")
-                },
-                unhighlight:function(e){
-                    $(e).closest(".form-group").removeClass("has-error")
-                },
-                success:function(e){                    
-                    e.closest(".form-group").removeClass("has-error"),e.remove()
-                },
-                submitHandler:function(e){
-                    $(".alert-danger").hide();
-                    $(".alert-success").show();
-                    loading();
-                    $.ajax({
-                            url: '<?php echo U('Sadmin/user/editPsd');?>',
-                            type: 'POST',
-                            data: $('.form-edit-psd').serialize(),
-                            dataType: 'json',
-                            success: function(data){
-                                if(data.status == 'success'){
-                                    bootbox.dialog({
-                                        message: data.msg,
-                                        title: "温馨提示：",
-                                        buttons:{
-                                            success:{
-                                                label: "确定",
-                                                className: "green",
-                                                callback: function(){
-                                                    window.location.reload();
-                                                }
-                                            }
-                                        }
-                                    })
-                                }else{
-                                    bootbox.dialog({
-                                        message: data.msg,
-                                        title: "温馨提示：",
-                                        buttons:{
-                                            success:{
-                                                label: "确定",
-                                                className: "green"
-                                            }
-                                        }
-                                    })
-                                }
-                                loadingRemove();
-                            }                            
-                        })
-                    return false;
-                }
-            })
-            //禁用用户
-            $('.disabled').click(function(){
-                var _this = $(this);
-                bootbox.dialog({
-                    message: "确定要禁用吗？禁用用户无法登陆",
-                    title: "温馨提示：",
-                    buttons:{
-                        success: {
-                            label: "确定",
-                            className: "green",
-                            callback: function(){
-                                loading();
-                                $.post('<?php echo U('Sadmin/User/disabled');?>', {id: _this.data('id')}, function(data){
-                                    if(data.status == 'success'){
-                                        _this.parent().parent().find('.user-status').html('<span class="label label-sm label-danger">已禁用</span>');
-                                        bootbox.dialog({
-                                            message: data.msg,
-                                            title: "温馨提示：",
-                                            buttons: {
-                                                success:{
-                                                    label: "确定",
-                                                    className: "green"
-                                                }                            
-                                            }
-                                        })
-                                    }else{
-                                        bootbox.dialog({
-                                            message: data.msg,
-                                            title: "温馨提示：",
-                                            buttons: {
-                                                success:{
-                                                    label: "确定",
-                                                    className: "green"
-                                                }                            
-                                            }
-                                        })
-                                    }
-                                    loadingRemove();
-                                }, 'json')
-                            }
-                        },
-                        cancel: {
-                            label: "取消",
-                            className: "red"
-                        }
-                    }
-                })
-            })
-            //删除用户
-            $('.delete').click(function(){
-                var _this = $(this);
-                var id    = _this.data('id');
-                bootbox.dialog({
-                    message: "确定要删除吗？删除用户不能恢复！",
-                    title: '温馨提示：',
-                    buttons:{
-                        success:{
-                            label: "确定",
-                            className: "green",
-                            callback: function(){
-                                loading();
-                                $.post('<?php echo U('Sadmin/User/delete');?>', {id: _this.data('id')}, function(data){
-                                    if(data.status == 'success'){
-                                        _this.parent().parent().remove();
-                                        bootbox.dialog({
-                                            message: data.msg,
-                                            title: "温馨提示：",
-                                            buttons: {
-                                                success:{
-                                                    label: "确定",
-                                                    className: "green"
-                                                }                            
-                                            }
-                                        })
-                                    }else{
-                                        bootbox.dialog({
-                                            message: data.msg,
-                                            title: "温馨提示：",
-                                            buttons: {
-                                                success:{
-                                                    label: "确定",
-                                                    className: "green"
-                                                }
-                                            }
-                                        })
-                                    }
-                                    loadingRemove();
-                                }, 'json')
-                            }
-                        },
-                        cancel:{
-                            label: "取消",
-                            className: "red"
-                        }
-                    }
-                })
-                return false;
-            })
-        })    
-    </script>    
-    </body>
-</html>

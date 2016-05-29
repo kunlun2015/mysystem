@@ -13,10 +13,10 @@ class UserController extends AdminController {
     public function index(){        
         $this->assign('page_title', $this->page_title.'用户管理');
         $sys_admin  = M('sys_admin');
-        $count      = $sys_admin->count();
+        $count      = $sys_admin->where("status != 2")->count();
         $Page       = new \Think\Page($count, 10);
         $pagination = $Page->show(); 
-        $list       = $sys_admin->limit($Page->firstRow.','.$Page->listRows)->select();
+        $list       = $sys_admin->where("status != 2")->limit($Page->firstRow.','.$Page->listRows)->select();
         $this->assign('list', $list);
         $this->assign('pagination', $pagination);
         $this->display();
@@ -123,6 +123,27 @@ class UserController extends AdminController {
         }else{
             $return = array('status' => 'fail', 'msg' => '用户禁用失败，请稍后重试！');
         }
+        exit(json_encode($return));
+    }
+
+    //删除用户，更改用户状态
+    public function delete(){
+        $id        = I('post.id', 0, 'int');
+        $sys_admin = M('sys_admin');
+        $data      = array('status' => 2);
+        $rst       = $sys_admin->where("id=$id")->data($data)->save();
+        if($rst){
+            $return = array('status' => 'success', 'msg' => '用户已成功删除！');
+        }else{
+            $return = array('status' => 'fail', 'msg' => '用户删除失败，请稍后重试！');
+        }
+        exit(json_encode($return));
+    }
+
+    //退出登录
+    public function logout(){
+        $rst = session('s_login_info', null);
+        $return = array('status' => 'success', 'msg' => '您已推出登陆');
         exit(json_encode($return));
     }
 }

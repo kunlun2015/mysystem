@@ -618,6 +618,56 @@
                     }
                 })
             })
+            //删除用户
+            $('.delete').click(function(){
+                var _this = $(this);
+                var id    = _this.data('id');
+                bootbox.dialog({
+                    message: "确定要删除吗？删除用户不能恢复！",
+                    title: '温馨提示：',
+                    buttons:{
+                        success:{
+                            label: "确定",
+                            className: "green",
+                            callback: function(){
+                                loading();
+                                $.post('{:U('Sadmin/User/delete')}', {id: _this.data('id')}, function(data){
+                                    if(data.status == 'success'){
+                                        _this.parent().parent().remove();
+                                        bootbox.dialog({
+                                            message: data.msg,
+                                            title: "温馨提示：",
+                                            buttons: {
+                                                success:{
+                                                    label: "确定",
+                                                    className: "green"
+                                                }                            
+                                            }
+                                        })
+                                    }else{
+                                        bootbox.dialog({
+                                            message: data.msg,
+                                            title: "温馨提示：",
+                                            buttons: {
+                                                success:{
+                                                    label: "确定",
+                                                    className: "green"
+                                                }
+                                            }
+                                        })
+                                    }
+                                    loadingRemove();
+                                }, 'json')
+                            }
+                        },
+                        cancel:{
+                            label: "取消",
+                            className: "red"
+                        }
+                    }
+                })
+                return false;
+            })
         })    
     </script>    
     </body>
