@@ -14,7 +14,7 @@
         <meta content="" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" /> -->
-        <link href="http://fonts.useso.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <!-- <link href="http://fonts.useso.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" /> -->
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -593,22 +593,16 @@
                 <div class="portlet light profile-sidebar-portlet ">
                     <!-- SIDEBAR USERPIC -->
                     <div class="profile-userpic">
-                        <img src="http://localhost/personal/mysystem/static/backed/assets/layouts/layout3/img/profile_user.jpg" class="img-responsive" alt="">
-                        <span class="edit-avatar"><i>修改头像</i><em></em></span>
+                        <img src="<?php echo C('site_url');?>upload/<?php echo ($user_info['avatar']); echo ($user_info['name']); ?>_big.png" class="img-responsive" alt="">
+                        <span class="edit-avatar"><i><a href="<?php echo U('Sadmin/My/avatarEdit');?>">修改头像</a></i><em></em></span>
                     </div>
                     <!-- END SIDEBAR USERPIC -->
                     <!-- SIDEBAR USER TITLE -->
                     <div class="profile-usertitle">
-                        <div class="profile-usertitle-name"> Marcus Doe </div>
+                        <div class="profile-usertitle-name"> <?php echo ($login_info['name']); ?> </div>
                         <div class="profile-usertitle-job"> Developer </div>
                     </div>
-                    <!-- END SIDEBAR USER TITLE -->
-                    <!-- SIDEBAR BUTTONS -->
-                    <div class="profile-userbuttons">
-                        <button type="button" class="btn btn-circle green btn-sm">Follow</button>
-                        <button type="button" class="btn btn-circle red btn-sm">Message</button>
-                    </div>
-                    <!-- END SIDEBAR BUTTONS -->
+                    <!-- END SIDEBAR USER TITLE -->                    
                     <!-- SIDEBAR MENU -->
                     <div class="profile-usermenu">
                         <ul class="nav">

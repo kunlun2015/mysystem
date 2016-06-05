@@ -11,6 +11,7 @@ use Think\Controller;
 class AdminController extends Controller {
 
     protected $page_title = 'Kunlun后台管理系统-';
+    private $login_info;
  
     public function __construct(){
         parent::__construct();
@@ -21,6 +22,7 @@ class AdminController extends Controller {
             header("Location: $login_url");
             exit();
         }
+        $this->login_info = $s_login_info;
         $this->assign('login_info', $s_login_info);
     }
 

@@ -14,7 +14,7 @@
         <meta content="" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" /> -->
-        <link href="http://fonts.useso.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <!-- <link href="http://fonts.useso.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" /> -->
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -33,7 +33,7 @@
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/layout.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="<?php echo C('STATIC_URL');?>assets/layouts/layout3/css/custom.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo C('STATIC_URL');?>css/backed-style.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo C('STATIC_URL');?>css/backed-style.css" rel="stylesheet" type="text/css" />        
         <!-- END THEME LAYOUT STYLES -->
         <link rel="shortcut icon" href="favicon.ico" />
     </head>
@@ -353,7 +353,7 @@
                                 <ul class="dropdown-menu dropdown-menu-default">
                                     <li>
                                         <a href="<?php echo U('Sadmin/My/profile');?>">
-                                            <i class="icon-user"></i> My Profile </a>
+                                            <i class="icon-user"></i> 我的信息 </a>
                                     </li>
                                     <li>
                                         <a href="app_calendar.html">
@@ -378,7 +378,7 @@
                                     </li>
                                     <li>
                                         <a href="javascript:void(0);" class="logout">
-                                            <i class="icon-key"></i> Log Out </a>
+                                            <i class="icon-key"></i> 退出登录 </a>
                                     </li>
                                 </ul>
                             </li>

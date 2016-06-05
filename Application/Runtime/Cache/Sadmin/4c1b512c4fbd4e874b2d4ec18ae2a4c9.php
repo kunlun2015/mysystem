@@ -14,7 +14,7 @@
         <meta content="" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" /> -->
-        <link href="http://fonts.useso.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <!-- <link href="http://fonts.useso.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" /> -->
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -576,15 +576,17 @@
                                 <i class="fa fa-circle"></i>
                             </li>
                             <li>
-                                <span>Layouts</span>
+                                <a href="<?php echo U('Sadmin/My/profile');?>">我的信息</a>
+                                <i class="fa fa-circle"></i>
+                            </li>
+                            <li>
+                                <span>修改头像</span>
                             </li>
                         </ul>
                         <!-- END PAGE BREADCRUMBS -->
                         <!-- BEGIN PAGE CONTENT INNER -->
                         <div class="page-content-inner">
-                            <div class="note note-info">
-                                <p> A black page template with a minimal dependency assets to use as a base for any custom page you create </p>
-                            </div>
+                            <div id="avator-act"></div>
                         </div>
                         <!-- END PAGE CONTENT INNER -->
                </div>
@@ -1261,3 +1263,71 @@
     <script src="<?php echo C('STATIC_URL');?>assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
     <script src="<?php echo C('STATIC_URL');?>js/commen.js" type="text/javascript"></script>
     <!-- END THEME LAYOUT SCRIPTS -->
+<script src="<?php echo C('LIB_URL');?>FaustCplus/swfobject.js"></script>
+<script type="text/javascript">
+    var forward = '<?php echo U('Sadmin/My/profile');?>';
+    function uploadevent(status) {
+        status += '';
+        switch (status) {
+            case '1':                
+                alert("头像修改成功！");
+                try {
+                    if (window.external.RCCoralOnlineFavPage("DetailVersion") >= 3.0 && window.external.RCCoralOnlineFavPage("passid") && '6943695' == window.external.RCCoralOnlineFavPage("passid")) {
+                        window.external.RCCoralOnUserHeadImageChanged();
+                    }
+                } catch (e) {
+                    try {
+                        if (chrome.sync.onlineFavPage("passid") && '6943695' == chrome.sync.onlineFavPage("passid")) {
+                            chrome.sync.onUserHeadImageChanged();
+                        }
+                    } catch (e) {
+                    }
+                }
+                if(forward!=''){
+                    window.location = forward;
+                }else{
+                    window.location.reload();
+                }
+                break;
+            case '-1':
+                window.location = forward;
+                break;
+            case '-2':
+                alert("上传失败！");
+                window.location.reload();
+                break;
+            default:
+                alert(typeof(status) + ' ' + status);
+        }
+    }
+    function langFunc() {
+        return {
+            "CX0189": "您上传的头像会自动生成三种尺寸\n请注意中小尺寸的头像是否清晰",
+            "CX0193": "仅支持JPG、GIF、PNG图片文件，且文件小于2M"
+        };
+    }
+    var flashvars = {
+        "jsfunc": "uploadevent",
+        "jslang": "langFunc",
+        "imgUrl": "<?php echo ($avatar); ?>?" + new Date().getTime(),
+        "pid": "75642723",
+        "uploadSrc": false,
+        "showBrow": true,
+        "showCame": true,
+        "uploadUrl": "<?php echo U('Sadmin/My/avatarSave');?>",
+        "uploadTmpUrl": "",
+        "pSize": "300|300|200|200|120|120|48|48"
+    };
+    var params = {
+        menu: "false",
+        scale: "noScale",
+        allowFullscreen: "true",
+        allowScriptAccess: "always",
+        wmode: "transparent",
+        bgcolor: "#FFFFFF"
+    };
+    var attributes = {
+        id: "FaustCplus"
+    };
+    swfobject.embedSWF("<?php echo C('LIB_URL');?>FaustCplus/FaustCplus.swf?v=20140417", "avator-act", "750", "500", "9.0.0", "expressInstall.swf", flashvars, params, attributes);
+</script>
