@@ -11,7 +11,7 @@ use Think\Controller;
 class AdminController extends Controller {
 
     protected $page_title = 'Kunlun后台管理系统-';
-    private $login_info;
+    protected $login_info;
  
     public function __construct(){
         parent::__construct();

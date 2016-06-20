@@ -24,11 +24,16 @@ class LoginController extends Controller {
                 $input_psd = md5(md5($password).$rst['encrypt']);
                 if($input_psd === $rst['password']){
                     //登陆成功
+                    if($rst['avatar']){
+                        $avatar = 'upload/'.$rst['avatar'].$rst['name'].'_big.png';
+                    }else{
+                        $avatar = 'static/images/profile_user.jpg';
+                    }
                     $s_login_info = array(
                                         'id'       => $rst['id'],
                                         'name'     => $rst['name'],
                                         'realname' => $rst['realname'],
-                                        'avatar'   => $rst['avatar']
+                                        'avatar'   => $avatar
                                     );
                     session('s_login_info', $s_login_info);
                     $return = array('status' => 'ok', 'msg' => '登陆成功，正在跳转...', 'url' => U('Sadmin/Index/index'));                    

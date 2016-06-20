@@ -347,7 +347,7 @@
                             <!-- BEGIN USER LOGIN DROPDOWN -->
                             <li class="dropdown dropdown-user dropdown-dark">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <img alt="" class="img-circle" src="<?php echo C('STATIC_URL');?>assets/layouts/layout3/img/avatar9.jpg">
+                                    <img alt="" class="img-circle" src="<?php echo C('site_url'); echo ($login_info['avatar']); ?>">
                                     <span class="username username-hide-mobile"><?php echo ($login_info['name']); ?></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
@@ -593,7 +593,7 @@
                 <div class="portlet light profile-sidebar-portlet ">
                     <!-- SIDEBAR USERPIC -->
                     <div class="profile-userpic">
-                        <img src="<?php echo C('site_url');?>upload/<?php echo ($user_info['avatar']); echo ($user_info['name']); ?>_big.png" class="img-responsive" alt="">
+                        <img src="<?php echo ($avatar); ?>" class="img-responsive" alt="">
                         <span class="edit-avatar"><i><a href="<?php echo U('Sadmin/My/avatarEdit');?>">修改头像</a></i><em></em></span>
                     </div>
                     <!-- END SIDEBAR USERPIC -->

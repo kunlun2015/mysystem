@@ -14,7 +14,13 @@ class MyController extends AdminController {
         $sys_admin = M('sys_admin');
         //用户信息
         $user_info = $sys_admin->field('name, realname, avatar')->where("id = {$this->login_info['id']}")->find();
-        $this->login_info['avatar'] = $user_info['avatar'];
+        $avatar = $user_info['avatar'].$user_info['name'].'_big.png';
+        if(!file_exists(C('upload_root').$avatar)){
+            $avatar = C('site_url').'static/images/profile_user.jpg';
+        }else{
+            $avatar = C('site_url').'upload/'.$avatar;
+        }
+        $this->assign('avatar', $avatar);
         $this->assign('user_info', $user_info);
         $this->display();
     }
@@ -48,7 +54,13 @@ class MyController extends AdminController {
         $sys_admin = M('sys_admin');
         $data = array('id'=>$this->login_info['id'], 'avatar'=>$date_path);
         $res = $sys_admin->data($data)->save();
-        $return = array('status' => '1', 'msg' => '头像上传成功！',);
+        if($res !== false){
+            $this->login_info['avatar'] = 'upload/'.$date_path.$this->login_info['name'].'_big.png';
+            session('s_login_info', $this->login_info);
+            $return = array('status' => '1', 'msg' => '头像上传成功！');
+        }else{
+            $return = array('status' => '-2', 'msg' => '头像上传失败！');
+        }        
         exit(json_encode($return));
     }
 }
