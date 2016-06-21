@@ -14,7 +14,7 @@
         <meta content="" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" /> -->
-        <link href="http://fonts.useso.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <!-- <link href="http://fonts.useso.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" /> -->
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo C('STATIC_URL');?>assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -347,7 +347,7 @@
                             <!-- BEGIN USER LOGIN DROPDOWN -->
                             <li class="dropdown dropdown-user dropdown-dark">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <img alt="" class="img-circle" src="<?php echo C('STATIC_URL');?>assets/layouts/layout3/img/avatar9.jpg">
+                                    <img alt="" class="img-circle" src="<?php echo C('site_url'); echo ($login_info['avatar']); ?>">
                                     <span class="username username-hide-mobile"><?php echo ($login_info['name']); ?></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
@@ -569,110 +569,26 @@
                 <!-- BEGIN PAGE CONTENT BODY -->
                 <div class="page-content">
                     <div class="container">
-<link href="<?php echo C('STATIC_URL');?>assets/pages/css/profile.min.css" rel="stylesheet" type="text/css" />
-<!-- BEGIN PAGE BREADCRUMBS -->
-<ul class="page-breadcrumb breadcrumb">
-    <li>
-        <a href="<?php echo U('Sadmin/Index/index');?>">首页</a>
-        <i class="fa fa-circle"></i>
-    </li>
-    <li>
-        <span>我的信息</span>
-    </li>
-</ul>
-<!-- END PAGE BREADCRUMBS -->
-<!-- BEGIN PAGE CONTENT INNER -->
-<div class="page-content-inner">
-    <div class="note note-info">
-        <p>个人信息管理</p>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="profile-sidebar">
-                <!-- PORTLET MAIN -->
-                <div class="portlet light profile-sidebar-portlet ">
-                    <!-- SIDEBAR USERPIC -->
-                    <div class="profile-userpic">
-                        <img src="http://localhost/personal/mysystem/static/backed/assets/layouts/layout3/img/profile_user.jpg" class="img-responsive" alt="">
-                        <span class="edit-avatar"><i>修改头像</i><em></em></span>
-                    </div>
-                    <!-- END SIDEBAR USERPIC -->
-                    <!-- SIDEBAR USER TITLE -->
-                    <div class="profile-usertitle">
-                        <div class="profile-usertitle-name"> Marcus Doe </div>
-                        <div class="profile-usertitle-job"> Developer </div>
-                    </div>
-                    <!-- END SIDEBAR USER TITLE -->
-                    <!-- SIDEBAR BUTTONS -->
-                    <div class="profile-userbuttons">
-                        <button type="button" class="btn btn-circle green btn-sm">Follow</button>
-                        <button type="button" class="btn btn-circle red btn-sm">Message</button>
-                    </div>
-                    <!-- END SIDEBAR BUTTONS -->
-                    <!-- SIDEBAR MENU -->
-                    <div class="profile-usermenu">
-                        <ul class="nav">
-                            <li class="active">
-                                <a href="page_user_profile_1.html">
-                                    <i class="icon-home"></i> Overview </a>
+                        <!-- BEGIN PAGE BREADCRUMBS -->
+                        <ul class="page-breadcrumb breadcrumb">
+                            <li>
+                                <a href="<?php echo U('Sadmin/Index/index');?>">首页</a>
+                                <i class="fa fa-circle"></i>
                             </li>
                             <li>
-                                <a href="page_user_profile_1_account.html">
-                                    <i class="icon-settings"></i> Account Settings </a>
+                                <a href="<?php echo U('Sadmin/My/profile');?>">我的信息</a>
+                                <i class="fa fa-circle"></i>
                             </li>
                             <li>
-                                <a href="page_user_profile_1_help.html">
-                                    <i class="icon-info"></i> Help </a>
+                                <span>修改头像</span>
                             </li>
                         </ul>
-                    </div>
-                    <!-- END MENU -->
-                </div>
-                <!-- END PORTLET MAIN -->
-                <!-- PORTLET MAIN -->
-                <div class="portlet light ">
-                    <!-- STAT -->
-                    <div class="row list-separated profile-stat">
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <div class="uppercase profile-stat-title"> 37 </div>
-                            <div class="uppercase profile-stat-text"> Projects </div>
+                        <!-- END PAGE BREADCRUMBS -->
+                        <!-- BEGIN PAGE CONTENT INNER -->
+                        <div class="page-content-inner">
+                            <div id="avator-act"></div>
                         </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <div class="uppercase profile-stat-title"> 51 </div>
-                            <div class="uppercase profile-stat-text"> Tasks </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <div class="uppercase profile-stat-title"> 61 </div>
-                            <div class="uppercase profile-stat-text"> Uploads </div>
-                        </div>
-                    </div>
-                    <!-- END STAT -->
-                    <div>
-                        <h4 class="profile-desc-title">About Marcus Doe</h4>
-                        <span class="profile-desc-text"> Lorem ipsum dolor sit amet diam nonummy nibh dolore. </span>
-                        <div class="margin-top-20 profile-desc-link">
-                            <i class="fa fa-globe"></i>
-                            <a href="http://www.keenthemes.com">www.keenthemes.com</a>
-                        </div>
-                        <div class="margin-top-20 profile-desc-link">
-                            <i class="fa fa-twitter"></i>
-                            <a href="http://www.twitter.com/keenthemes/">@keenthemes</a>
-                        </div>
-                        <div class="margin-top-20 profile-desc-link">
-                            <i class="fa fa-facebook"></i>
-                            <a href="http://www.facebook.com/keenthemes/">keenthemes</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- END PORTLET MAIN -->
-            </div>
-            <div class="profile-content">
-                
-                          
-            </div>
-        </div>
-    </div>
-</div>
+                        <!-- END PAGE CONTENT INNER -->
                </div>
             </div>
             <!-- END PAGE CONTENT BODY -->
@@ -1347,3 +1263,71 @@
     <script src="<?php echo C('STATIC_URL');?>assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
     <script src="<?php echo C('STATIC_URL');?>js/commen.js" type="text/javascript"></script>
     <!-- END THEME LAYOUT SCRIPTS -->
+<script src="<?php echo C('LIB_URL');?>FaustCplus/swfobject.js"></script>
+<script type="text/javascript">
+    var forward = '<?php echo U('Sadmin/My/profile');?>';
+    function uploadevent(status) {
+        status += '';
+        switch (status) {
+            case '1':                
+                alert("头像修改成功！");
+                try {
+                    if (window.external.RCCoralOnlineFavPage("DetailVersion") >= 3.0 && window.external.RCCoralOnlineFavPage("passid") && '6943695' == window.external.RCCoralOnlineFavPage("passid")) {
+                        window.external.RCCoralOnUserHeadImageChanged();
+                    }
+                } catch (e) {
+                    try {
+                        if (chrome.sync.onlineFavPage("passid") && '6943695' == chrome.sync.onlineFavPage("passid")) {
+                            chrome.sync.onUserHeadImageChanged();
+                        }
+                    } catch (e) {
+                    }
+                }
+                if(forward!=''){
+                    window.location = forward;
+                }else{
+                    window.location.reload();
+                }
+                break;
+            case '-1':
+                window.location = forward;
+                break;
+            case '-2':
+                alert("上传失败！");
+                window.location.reload();
+                break;
+            default:
+                alert(typeof(status) + ' ' + status);
+        }
+    }
+    function langFunc() {
+        return {
+            "CX0189": "您上传的头像会自动生成三种尺寸\n请注意中小尺寸的头像是否清晰",
+            "CX0193": "仅支持JPG、GIF、PNG图片文件，且文件小于2M"
+        };
+    }
+    var flashvars = {
+        "jsfunc": "uploadevent",
+        "jslang": "langFunc",
+        "imgUrl": "<?php echo ($avatar); ?>?" + new Date().getTime(),
+        "pid": "75642723",
+        "uploadSrc": false,
+        "showBrow": true,
+        "showCame": true,
+        "uploadUrl": "<?php echo U('Sadmin/My/avatarSave');?>",
+        "uploadTmpUrl": "",
+        "pSize": "300|300|200|200|120|120|48|48"
+    };
+    var params = {
+        menu: "false",
+        scale: "noScale",
+        allowFullscreen: "true",
+        allowScriptAccess: "always",
+        wmode: "transparent",
+        bgcolor: "#FFFFFF"
+    };
+    var attributes = {
+        id: "FaustCplus"
+    };
+    swfobject.embedSWF("<?php echo C('LIB_URL');?>FaustCplus/FaustCplus.swf?v=20140417", "avator-act", "750", "500", "9.0.0", "expressInstall.swf", flashvars, params, attributes);
+</script>

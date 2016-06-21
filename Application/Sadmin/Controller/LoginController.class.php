@@ -14,7 +14,7 @@ class LoginController extends Controller {
             $name     = I('post.username', '', 'htmlspecialchars');
             $password = I('post.password', '', 'htmlspecialchars');
             $sys_admin = M('sys_admin');
-            $rst = $sys_admin->field('id, name, password, encrypt, status')->where("name='{$name}' and status != 2")->find();
+            $rst = $sys_admin->field('id, name, realname, avatar, password, encrypt, status')->where("name='{$name}' and status != 2")->find();
             if($rst){
                 //是否已禁用
                 if($rst['status'] == 1){
@@ -24,9 +24,16 @@ class LoginController extends Controller {
                 $input_psd = md5(md5($password).$rst['encrypt']);
                 if($input_psd === $rst['password']){
                     //登陆成功
+                    if($rst['avatar']){
+                        $avatar = 'upload/'.$rst['avatar'].$rst['name'].'_big.png';
+                    }else{
+                        $avatar = 'static/images/profile_user.jpg';
+                    }
                     $s_login_info = array(
-                                        'id'   => $rst['id'],
-                                        'name' => $rst['name']
+                                        'id'       => $rst['id'],
+                                        'name'     => $rst['name'],
+                                        'realname' => $rst['realname'],
+                                        'avatar'   => $avatar
                                     );
                     session('s_login_info', $s_login_info);
                     $return = array('status' => 'ok', 'msg' => '登陆成功，正在跳转...', 'url' => U('Sadmin/Index/index'));                    

@@ -23,22 +23,16 @@
                 <div class="portlet light profile-sidebar-portlet ">
                     <!-- SIDEBAR USERPIC -->
                     <div class="profile-userpic">
-                        <img src="http://localhost/personal/mysystem/static/backed/assets/layouts/layout3/img/profile_user.jpg" class="img-responsive" alt="">
-                        <span class="edit-avatar"><i>修改头像</i><em></em></span>
+                        <img src="{$avatar}" class="img-responsive" alt="">
+                        <span class="edit-avatar"><i><a href="{:U('Sadmin/My/avatarEdit')}">修改头像</a></i><em></em></span>
                     </div>
                     <!-- END SIDEBAR USERPIC -->
                     <!-- SIDEBAR USER TITLE -->
                     <div class="profile-usertitle">
-                        <div class="profile-usertitle-name"> Marcus Doe </div>
+                        <div class="profile-usertitle-name"> {$login_info['name']} </div>
                         <div class="profile-usertitle-job"> Developer </div>
                     </div>
-                    <!-- END SIDEBAR USER TITLE -->
-                    <!-- SIDEBAR BUTTONS -->
-                    <div class="profile-userbuttons">
-                        <button type="button" class="btn btn-circle green btn-sm">Follow</button>
-                        <button type="button" class="btn btn-circle red btn-sm">Message</button>
-                    </div>
-                    <!-- END SIDEBAR BUTTONS -->
+                    <!-- END SIDEBAR USER TITLE -->                    
                     <!-- SIDEBAR MENU -->
                     <div class="profile-usermenu">
                         <ul class="nav">
