@@ -1,0 +1,14 @@
+[ 2016-06-22T18:53:09+08:00 ] ::1 /amos/git/mysystem/Sadmin/Login/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001846s ]
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0420s ]
+SQL: SELECT `id`,`name`,`realname`,`avatar`,`password`,`encrypt`,`status` FROM `kl_sys_admin` WHERE ( name='kunlun' and status != 2 ) LIMIT 1   [ RunTime:0.0149s ]
+
+[ 2016-06-22T18:53:13+08:00 ] ::1 /amos/git/mysystem/Sadmin/Login/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001361s ]
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0282s ]
+SQL: SELECT `id`,`name`,`realname`,`avatar`,`password`,`encrypt`,`status` FROM `kl_sys_admin` WHERE ( name='kunlun' and status != 2 ) LIMIT 1   [ RunTime:0.0005s ]
+
