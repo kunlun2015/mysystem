@@ -569,24 +569,168 @@
                 <!-- BEGIN PAGE CONTENT BODY -->
                 <div class="page-content">
                     <div class="container">
-                        <!-- BEGIN PAGE BREADCRUMBS -->
-                        <ul class="page-breadcrumb breadcrumb">
-                            <li>
-                                <a href="<?php echo U('Sadmin/Index/index');?>">首页</a>
-                                <i class="fa fa-circle"></i>
-                            </li>
-                            <li>
-                                <span>Layouts</span>
-                            </li>
-                        </ul>
-                        <!-- END PAGE BREADCRUMBS -->
-                        <!-- BEGIN PAGE CONTENT INNER -->
-                        <div class="page-content-inner">
-                            <div class="note note-info">
-                                <p>系统功能管理</p>
+<!-- BEGIN PAGE BREADCRUMBS -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a href="<?php echo U('Sadmin/Index/index');?>">首页</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <span>Layouts</span>
+    </li>
+</ul>
+<!-- END PAGE BREADCRUMBS -->
+<!-- BEGIN PAGE CONTENT INNER -->
+<div class="page-content-inner">
+    <div class="note note-info">
+        <p>系统功能管理列表</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet light ">                
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="btn-group">
+                                <button id="bt-add-user" class="btn sbold green"> 添加一级菜单
+                                    <i class="fa fa-plus"></i>
+                                </button>
                             </div>
                         </div>
-                        <!-- END PAGE CONTENT INNER -->
+                        <div class="col-md-6">
+                            <div class="btn-group pull-right">
+                                <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">Tools
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-print"></i> Print </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-file-pdf-o"></i> Save as PDF </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-file-excel-o"></i> Export to Excel </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
+                    <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" /> 
+                            </th>
+                            <th>菜单名称</th>
+                            <th>图标样式</th>
+                            <th>模块</th>
+                            <th>控制器</th>
+                            <th>方法</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?><tr class="odd gradeX">
+                            <td><input type="checkbox" class="checkboxes" value="1" /></td>
+                            <td><?php echo ($data["name"]); ?></td>
+                            <td><?php echo ($data["realname"]); ?></td>
+                            <td><?php echo ($data["email"]); ?></td>
+                            <td class="center user-status">
+                            <?php if($data["status"] == 0): ?><span class="label label-sm label-success">有效</span>
+                                <?php elseif($data["status"] == 1): ?><span class="label label-sm label-danger">已禁用</span><?php endif; ?>
+                            </td>
+                            <td class="table-options">
+                                <a class="edit" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">编辑</a>
+                                <a class="edit-psd" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">修改密码</a>
+                                <a class="disabled" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">禁用</a>
+                                <a class="delete" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">删除</a>
+                            </td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </tbody>
+                </table>
+                <?php echo ($pagination); ?>
+            </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+    </div>
+</div>
+<!-- BEGIN Modals-->
+<!--添加用户-->
+ <div class="modal fade" id="modal-add-user" tabindex="-1"  data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title"><i class="fa fa-user-plus font-green"></i> 添加功能</h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-danger display-hide">
+                    <button class="close" data-close="alert"></button> You have some form errors. Please check below. 
+                </div>
+                <div class="alert alert-success display-hide">
+                    <button class="close" data-close="alert"></button> Your form validation is successful! 
+                </div>
+                <div class="portlet-body form">
+                    <form class="form-horizontal form-add-user" role="form" novalidate="novalidate">
+                        <div class="form-body">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">用户名</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="username" class="form-control" placeholder="请输入登录用户名">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">真实姓名</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="realname" class="form-control" placeholder="请输入登录用户的真实姓名">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">E-mail</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="email" id="email" class="form-control" placeholder="请输入登录用户的E-mail">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">登录密码</label>
+                                <div class="col-md-10">
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="请输入登录密码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">确认密码</label>
+                                <div class="col-md-10">
+                                    <input type="password" name="password_confirm" class="form-control" placeholder="请重新输入登录密码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">备注</label>
+                                <div class="col-md-10">
+                                    <textarea name="remark" id="remark" class="form-control" placeholder="登录用户的备注信息"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn dark btn-outline" data-dismiss="modal">取消</button>
+                <button type="button" class="btn green submit-add-user">确定</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- END Modals-->
+<!-- END PAGE CONTENT INNER -->
                </div>
             </div>
             <!-- END PAGE CONTENT BODY -->
@@ -1261,3 +1405,105 @@
     <script src="<?php echo C('STATIC_URL');?>assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
     <script src="<?php echo C('STATIC_URL');?>js/commen.js" type="text/javascript"></script>
     <!-- END THEME LAYOUT SCRIPTS -->
+<script>
+    $(function(){
+        //添加用户
+        $('#bt-add-user').click(function(){
+            $('#modal-add-user').modal('show');
+            return false;
+        })
+        $('.submit-add-user').click(function(){
+            $('.form-add-user').submit();
+        })
+        $('.form-add-user').validate({
+            errorElement:"span",
+            errorClass:"help-block",
+            focusInvalid:!1,
+            rules:{
+                username: {required:!0},
+                realname: {required:!0},
+                email: {required: true, email: true},
+                password: {required: true, minlength:6},
+                password_confirm: {required: true, equalTo: "#password"}
+            },
+            messages:{
+                username: {
+                    required: "请输入登录用户名"
+                },                    
+                realname: {
+                    required: "请输入登录用户的真实姓名"
+                },
+                email: {
+                    required: "请输入登录用户的E-mail",
+                    email: "email格式正确"
+                },
+                password: {
+                    required: "请输入登录密码",
+                    minlength: "密码不能少于6位"
+                },
+                password_confirm: {
+                    required: "请确认登陆密码",
+                    equalTo: "两次密码填写不一致"
+                }
+            },
+            invalidHandler:function(e,r){
+                $(".alert-danger").show();
+                $(".alert-success").hide();
+            },
+            highlight:function(e){
+                $(".alert-danger").show();
+                $(".alert-success").hide();
+                $(e).closest(".form-group").addClass("has-error")
+            },
+            unhighlight:function(e){
+                $(e).closest(".form-group").removeClass("has-error")
+            },
+            success:function(e){                    
+                e.closest(".form-group").removeClass("has-error"),e.remove()
+            },
+            submitHandler:function(e){
+                $(".alert-danger").hide();
+                $(".alert-success").show();
+                loading();
+                $.ajax({
+                        url: '<?php echo U('Sadmin/user/add');?>',
+                        type: 'POST',
+                        data: $('.form-add-user').serialize(),
+                        dataType: 'json',
+                        success: function(data){
+                            if(data.status == 'success'){
+                                bootbox.dialog({
+                                    message: data.msg,
+                                    title: "温馨提示：",
+                                    buttons:{
+                                        success:{
+                                            label: "确定",
+                                            className: "green",
+                                            callback: function(){
+                                                window.location.reload();
+                                            }
+                                        }
+                                    }
+                                })
+                            }else{
+                                bootbox.dialog({
+                                    message: data.msg,
+                                    title: "温馨提示：",
+                                    buttons:{
+                                        success:{
+                                            label: "确定",
+                                            className: "green"
+                                        }
+                                    }
+                                })
+                            }
+                            loadingRemove();
+                        }                            
+                    })
+                return false;
+            }
+        })
+    })
+</script>
+    </body>
+</html>

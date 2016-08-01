@@ -1,0 +1,434 @@
+[ 2016-07-31T14:54:53+08:00 ] ::1 /personal/mysystem/sadmin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000805s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001273s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+
+[ 2016-07-31T14:54:54+08:00 ] ::1 /personal/mysystem/Sadmin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001128s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000431s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000543s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079290s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002633s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003781s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001792s ]
+
+[ 2016-07-31T14:54:55+08:00 ] ::1 /personal/mysystem/Sadmin/Login/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+
+[ 2016-07-31T14:55:02+08:00 ] ::1 /personal/mysystem/Sadmin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001748s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0727s ]
+SQL: SELECT `id`,`name`,`realname`,`avatar`,`password`,`encrypt`,`status` FROM `kl_sys_admin` WHERE ( name='kunlun' and status != 2 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-07-31T14:55:03+08:00 ] ::1 /personal/mysystem/Sadmin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000873s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001510s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000945s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001059s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.122133s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.122302s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.005432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006676s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001837s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001949s ]
+
+[ 2016-07-31T14:55:04+08:00 ] ::1 /personal/mysystem/Sadmin/Index/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000833s ]
+
+[ 2016-07-31T14:55:05+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000790s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001595s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0082s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `kl_sys_admin` WHERE ( status != 2 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `kl_sys_admin` WHERE ( status != 2 ) LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081171s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001210s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.006374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007861s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001683s ]
+
+[ 2016-07-31T14:55:25+08:00 ] ::1 /personal/mysystem/Sadmin/Function/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000910s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001465s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.019875s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.020025s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074537s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074636s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.004936s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001854s ]
+
+[ 2016-07-31T14:55:26+08:00 ] ::1 /personal/mysystem/Sadmin/Function/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001427s ]
+
+[ 2016-07-31T15:25:14+08:00 ] ::1 /personal/mysystem/Sadmin/Function/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000878s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001852s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000785s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000878s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037876s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037971s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000909s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.004984s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003255s ]
+
+[ 2016-07-31T15:25:34+08:00 ] ::1 /personal/mysystem/Sadmin/Function/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000742s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001166s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001270s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000804s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000896s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036676s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001273s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.006633s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001509s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001658s ]
+
+[ 2016-07-31T15:29:18+08:00 ] ::1 /personal/mysystem/Sadmin/Function/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001309s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000785s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000872s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038035s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038161s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000988s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.005997s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001941s ]
+
+[ 2016-07-31T15:29:24+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001449s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0077s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `kl_sys_admin` WHERE ( status != 2 ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `kl_sys_admin` WHERE ( status != 2 ) LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001221s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051222s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001073s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.006285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001198s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001308s ]
+
+[ 2016-07-31T15:30:37+08:00 ] ::1 /personal/mysystem/Sadmin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001394s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `kl_sys_admin` [ RunTime:0.0137s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `kl_sys_admin` WHERE ( status != 2 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `kl_sys_admin` WHERE ( status != 2 ) LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001447s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001637s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047878s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.005807s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006576s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001153s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001235s ]
+
+[ 2016-07-31T15:30:42+08:00 ] ::1 /personal/mysystem/Sadmin/Function/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001721s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000815s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000907s ]
+NOTIC: [8] Undefined variable: list E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 639 行.
+NOTIC: [8] Undefined variable: pagination E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 657 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041561s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041653s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001589s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.005070s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006791s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001401s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001499s ]
+
+[ 2016-07-31T15:31:07+08:00 ] ::1 /personal/mysystem/Sadmin/Function/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001805s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001978s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000876s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] Undefined variable: list E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 639 行.
+NOTIC: [8] Undefined variable: pagination E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 657 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044192s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001443s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.006753s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001743s ]
+
+[ 2016-07-31T15:32:12+08:00 ] ::1 /personal/mysystem/Sadmin/Function/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001988s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002217s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000893s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000989s ]
+NOTIC: [8] Undefined variable: list E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 639 行.
+NOTIC: [8] Undefined variable: pagination E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 657 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044716s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001112s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.005640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006889s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001785s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001932s ]
+
+[ 2016-07-31T15:34:35+08:00 ] ::1 /personal/mysystem/Sadmin/Function/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001747s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001252s ]
+NOTIC: [8] Undefined variable: list E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 640 行.
+NOTIC: [8] Undefined variable: pagination E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048886s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001053s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.005236s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006457s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002609s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002774s ]
+
+[ 2016-07-31T15:46:48+08:00 ] ::1 /personal/mysystem/Sadmin/Function/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001180s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001193s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001337s ]
+NOTIC: [8] Undefined variable: list E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 640 行.
+NOTIC: [8] Undefined variable: pagination E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043226s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043308s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000901s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.005197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001721s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001864s ]
+
+[ 2016-07-31T15:47:13+08:00 ] ::1 /personal/mysystem/Sadmin/Function/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000903s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001088s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001192s ]
+NOTIC: [8] Undefined variable: list E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 640 行.
+NOTIC: [8] Undefined variable: pagination E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043520s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.005255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006241s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001723s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001840s ]
+
+[ 2016-07-31T15:49:15+08:00 ] ::1 /personal/mysystem/Sadmin/Function/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000207s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001282s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001287s ]
+NOTIC: [8] Undefined variable: list E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 640 行.
+NOTIC: [8] Undefined variable: pagination E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046285s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001172s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.005783s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001794s ]
+
+[ 2016-07-31T15:58:00+08:00 ] ::1 /personal/mysystem/Sadmin/Function/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001234s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000866s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000954s ]
+NOTIC: [8] Undefined variable: list E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 640 行.
+NOTIC: [8] Undefined variable: pagination E:\document\localsite\php\personal\mysystem\Application\Runtime\Cache\Sadmin\308041bcdfedbf9482e20f8f6778f826.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.005168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001514s ]
+

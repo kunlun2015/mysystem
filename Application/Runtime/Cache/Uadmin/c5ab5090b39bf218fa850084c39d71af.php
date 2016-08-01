@@ -5,10 +5,6 @@
 <html lang="en">
     <!--<![endif]-->
     <!-- BEGIN HEAD -->
-<<<<<<< HEAD
-
-=======
->>>>>>> cc625cc18584f025de2e3bfc541472df35ef6c3c
     <head>
         <meta charset="utf-8" />
         <title>Metronic | Blank Page Layout</title>
@@ -1646,11 +1642,7 @@
                     <div class="note note-info">
                         <p> A black page template with a minimal dependency assets to use as a base for any custom page you create </p>
                     </div>
-<<<<<<< HEAD
-                </div>
-=======
 </div>
->>>>>>> cc625cc18584f025de2e3bfc541472df35ef6c3c
                 <!-- END CONTENT BODY -->
             </div>
             <!-- END CONTENT -->
