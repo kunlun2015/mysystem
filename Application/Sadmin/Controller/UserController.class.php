@@ -10,8 +10,7 @@ namespace Sadmin\Controller;
 use Think\Controller;
 class UserController extends AdminController {
 
-    public function index(){    
-    var_dump($this->login_info);    
+    public function index(){ 
         $this->assign('page_title', $this->page_title.'用户管理');
         $sys_admin  = M('sys_admin');
         $count      = $sys_admin->where("status != 2")->count();

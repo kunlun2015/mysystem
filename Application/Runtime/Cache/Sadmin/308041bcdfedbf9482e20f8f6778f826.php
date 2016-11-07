@@ -595,7 +595,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="btn-group">
-                                <button id="bt-add-user" class="btn sbold green"> 添加一级菜单
+                                <button id="bt-add" class="btn sbold green"> 添加一级菜单
                                     <i class="fa fa-plus"></i>
                                 </button>
                             </div>
@@ -634,25 +634,29 @@
                             <th>模块</th>
                             <th>控制器</th>
                             <th>方法</th>
+                            <th>状态</th>
+                            <th>操作</th>
                         </tr>
                     </thead>
                     <tbody> 
-                        <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?><tr class="odd gradeX">
+                        <?php if(is_array($function_list)): $i = 0; $__LIST__ = $function_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?><tr class="odd gradeX">
                             <td><input type="checkbox" class="checkboxes" value="1" /></td>
-                            <td><?php echo ($data["name"]); ?></td>
-                            <td><?php echo ($data["realname"]); ?></td>
-                            <td><?php echo ($data["email"]); ?></td>
-                            <td class="center user-status">
-                            <?php if($data["status"] == 0): ?><span class="label label-sm label-success">有效</span>
+                            <td><?php echo ($data["title"]); ?></td>
+                            <td><?php echo ($data["style"]); ?></td>
+                            <td><?php echo ($data["module"]); ?></td>
+                            <td><?php echo ($data["controller"]); ?></td>
+                            <td><?php echo ($data["method"]); ?></td>                            
+                            <td class="center">
+                                <?php if($data["status"] == 0): ?><span class="label label-sm label-success">有效</span>
                                 <?php elseif($data["status"] == 1): ?><span class="label label-sm label-danger">已禁用</span><?php endif; ?>
                             </td>
                             <td class="table-options">
+                                <a href="">添加子菜单</a>
                                 <a class="edit" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">编辑</a>
-                                <a class="edit-psd" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">修改密码</a>
                                 <a class="disabled" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">禁用</a>
                                 <a class="delete" data-id="<?php echo ($data["id"]); ?>" href="javascript:void(0)">删除</a>
                             </td>
-                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>                        
                     </tbody>
                 </table>
                 <?php echo ($pagination); ?>
@@ -663,7 +667,7 @@
 </div>
 <!-- BEGIN Modals-->
 <!--添加用户-->
- <div class="modal fade" id="modal-add-user" tabindex="-1"  data-backdrop="static" data-keyboard="false">
+ <div class="modal fade" id="modal-add" tabindex="-1"  data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -678,36 +682,42 @@
                     <button class="close" data-close="alert"></button> Your form validation is successful! 
                 </div>
                 <div class="portlet-body form">
-                    <form class="form-horizontal form-add-user" role="form" novalidate="novalidate">
+                    <form class="form-horizontal form-add" role="form" novalidate="novalidate">
                         <div class="form-body">
                             <div class="form-group">
-                                <label class="col-md-2 control-label">用户名</label>
+                                <label class="col-md-2 control-label">菜单名称</label>
                                 <div class="col-md-10">
-                                    <input type="text" name="username" class="form-control" placeholder="请输入登录用户名">
+                                    <input type="text" name="title" class="form-control" placeholder="请输入菜单名称">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label">真实姓名</label>
+                                <label class="col-md-2 control-label">图标样式</label>
                                 <div class="col-md-10">
-                                    <input type="text" name="realname" class="form-control" placeholder="请输入登录用户的真实姓名">
+                                    <input type="text" name="style" class="form-control" placeholder="请输入菜单小图标样式">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label">E-mail</label>
+                                <label class="col-md-2 control-label">模块名</label>
                                 <div class="col-md-10">
-                                    <input type="text" name="email" id="email" class="form-control" placeholder="请输入登录用户的E-mail">
+                                    <input type="text" name="module" class="form-control" placeholder="菜单链接模块名称">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label">登录密码</label>
+                                <label class="col-md-2 control-label">控制器</label>
                                 <div class="col-md-10">
-                                    <input type="password" name="password" id="password" class="form-control" placeholder="请输入登录密码">
+                                    <input type="text" name="controller" class="form-control" placeholder="菜单控制器">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label">确认密码</label>
+                                <label class="col-md-2 control-label">方法名</label>
                                 <div class="col-md-10">
-                                    <input type="password" name="password_confirm" class="form-control" placeholder="请重新输入登录密码">
+                                    <input type="text" name="method" class="form-control" placeholder="对应控制器的方法">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">菜单排序</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="sort" class="form-control" placeholder="菜单的排序，越小越靠前。">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -722,7 +732,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn dark btn-outline" data-dismiss="modal">取消</button>
-                <button type="button" class="btn green submit-add-user">确定</button>
+                <button type="button" class="btn green submit-add">确定</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -1407,43 +1417,38 @@
     <!-- END THEME LAYOUT SCRIPTS -->
 <script>
     $(function(){
-        //添加用户
-        $('#bt-add-user').click(function(){
-            $('#modal-add-user').modal('show');
+        //添加菜单
+        $('#bt-add').click(function(){
+            $('#modal-add').modal('show');
             return false;
         })
-        $('.submit-add-user').click(function(){
-            $('.form-add-user').submit();
+        $('.submit-add').click(function(){
+            $('.form-add').submit();
         })
-        $('.form-add-user').validate({
+        $('.form-add').validate({
             errorElement:"span",
             errorClass:"help-block",
             focusInvalid:!1,
             rules:{
-                username: {required:!0},
-                realname: {required:!0},
-                email: {required: true, email: true},
-                password: {required: true, minlength:6},
-                password_confirm: {required: true, equalTo: "#password"}
+                title: {required:!0,maxlength: 8},
+                module: {required: true},
+                controller: {required: true},
+                method: {required: true},
+                sort: {}
             },
             messages:{
-                username: {
-                    required: "请输入登录用户名"
+                title: {
+                    required: "请输入菜单名称",
+                    maxlength: '菜单名称不能超过8个字符'
                 },                    
-                realname: {
-                    required: "请输入登录用户的真实姓名"
+                module: {
+                    required: "请填写菜单链接模块名称"
                 },
-                email: {
-                    required: "请输入登录用户的E-mail",
-                    email: "email格式正确"
+                controller: {
+                    required: "请输入控制器名称"
                 },
-                password: {
-                    required: "请输入登录密码",
-                    minlength: "密码不能少于6位"
-                },
-                password_confirm: {
-                    required: "请确认登陆密码",
-                    equalTo: "两次密码填写不一致"
+                method: {
+                    required: "请填写方法名称"
                 }
             },
             invalidHandler:function(e,r){
@@ -1466,9 +1471,9 @@
                 $(".alert-success").show();
                 loading();
                 $.ajax({
-                        url: '<?php echo U('Sadmin/user/add');?>',
+                        url: '<?php echo U('Sadmin/Function/add');?>',
                         type: 'POST',
-                        data: $('.form-add-user').serialize(),
+                        data: $('.form-add').serialize(),
                         dataType: 'json',
                         success: function(data){
                             if(data.status == 'success'){

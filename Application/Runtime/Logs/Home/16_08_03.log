@@ -1,0 +1,22 @@
+[ 2016-08-03T10:19:28+08:00 ] ::1 /personal/mysystem/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003483s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\document\localsite\php\personal\mysystem\ThinkPHP\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.018920s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.019189s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.267209s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.267477s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013892s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.013664s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.027837s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003437s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003625s ]
+
